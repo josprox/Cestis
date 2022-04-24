@@ -6,6 +6,12 @@ El usuario "admin", podrá interactuar con la información de los maestros y sus
 
 Este sistema está programado en PHP.
 
+- Para poder usar Cetis CWP necesitará algunos requisitos mínimos:
+• Versión mínima requerida de PHP: 8.0.1
+• Espacio requerido en disco: 190 mb. 
+• Transferencia de red requerida del servidor: 5 mb.
+• Protocolo de transferencia recomendado: SFTP (SSHFTP) ó FTPS (FTPSSL).
+
 Cetis CWP ocupa los siguientes frameworks para existir:
 
 - Facilito F(x) sites creado por JOSPROX MX | Internacional: Este framework dá la estructura para el panel del alumno y maestro (back-end), conectado hacia la base de datos y leyendo cada tabla necesaria para mostrarle información tanto al alumno (usuario) cómo al maestro.
@@ -98,10 +104,6 @@ Integración de Laravel: Laravel es un framework de código abierto para desarro
 - Contiene una interfaz amigable, pues está programado con Bootstrap 5.
 - Se integró para el Super Admin (programadores) la posibilidad de Generar un crud con tan solo una línea de comando, basado en livewire.
 
-Podrás acceder desde el siguiente link:
-
-https://panel.josprox.ovh/
-
 Creación de Cetis CWP System:
 
 - Se ha eliminado más del 80% el sistema "Cestis_CWP" para darle lugar a la versión "CETIS_CWP" y así olvidar el nombre antiguo.
@@ -111,11 +113,6 @@ Creación de Cetis CWP System:
 • Espacio requerido en disco: 256 mb. 
 • Transferencia de red requerida del servidor: 5 mb.
 • Protocolo de transferencia recomendado: SFTP (SSHFTP) ó FTPS (FTPSSL).
-- Se eliminó el subdominio cestiscwp.josprox.com y se dejó el subdominio cestis.josprox.com pero redireccionando al dominio de josprox.ovh el cuál será el dominio principal para el proyecto. 
-
-Pará poder acceder al servidor, tendrás que acceder al siguiente link con las credenciales antiguas:
-
-https://panel.josprox.com:2053/
 
 Cetis CWP APP: Desde esta actualización, la aplicación web podrá ser instalada desde Android, ios, Mac y Windows con tan solo un clic, de una manera segura.
 

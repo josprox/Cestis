@@ -32,6 +32,8 @@ Este sistema está programado en PHP.
 
 # TIMELINE versión 6.1.1 solución de errores
 
+Fecha 23/04/22
+
 Con esta versión se tuvieron pequeñas mejoras para el funcionamiento correcto de Cetis CWP. 
 
 Cetis CWP Admin:
@@ -44,6 +46,8 @@ Cetis CWP alumnos:
 - Ahora el usuario podrá descargar su boleta correspondiente a su grado, grupo, especialidad y turno. Anteriormente podía descargar todas las boletas de todos los alumnos. 
 
 # Versión 6.1 estable
+
+Fecha 20/04/22
 
 Introducción:
 En esta versión se hicieron varias mejoras a Cetis Control Web Panel, tratando de hacer mas 
@@ -90,6 +94,8 @@ Con estas mejoras se solucionaron pequeños errores de seguridad que tenía Cest
 antigua de Cetis CWP).
 
 # TIMELINE versión 6.0.1 Beta 4
+
+Fecha 18/04/22
 
 En esta actualización se optimizaron los recursos y existieron mejoras que, cambiaron completamente a la aplicación web.
 Integra recursos muy importantes y esto mantendrá a la aplicación en su mayoría de forma dinámica.
@@ -142,3 +148,9 @@ Se mejoró:
 • El alumno solo se podrá registrar si, en la base de datos está registrado el Número de Control, que no exista un Usuario con ese Número de Control, que no se pueda duplicar el usuario.
 - Sistema basado en la base de datos: Para la sección de registro, los usuarios podrán elegir opciones qué fueron anteriormente generados por el usuario "admin". Por ejemplo:
 • Sexos: Por defecto, cetis CWP viene con 2 orientaciones sexuales, masculino y femenino (desde la versión Cestis CWP 4.0) pero ahora, debido a la integración de Laravel, se pudo integrar el "No binario" a la base de datos. Es por eso que, automáticamente en el registro aparecerá 3 opciones, pues el sistema de registro primero checa los datos en la base de datos y después los manda con un formato html al sistema para imprimirle la información al usuario. El administrador podría agregar más orientaciones Sexuales o quitarlas con unos pocos clics en el panel de Cetis CWP. 
+
+# TIMELINE versión 5.0.1 beta 6
+
+Fecha 14/04/22
+
+Se integra laravel con livewire para crear el sistema de administración.

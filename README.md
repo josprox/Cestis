@@ -6,11 +6,15 @@ El usuario "admin", podrá interactuar con la información de los maestros y sus
 
 Este sistema está programado en PHP.
 
-- Para poder usar Cetis CWP necesitará algunos requisitos mínimos:
-• Versión mínima requerida de PHP: 8.0.1
-• Espacio requerido en disco: 190 mb. 
-• Transferencia de red requerida del servidor: 5 mb.
-• Protocolo de transferencia recomendado: SFTP (SSHFTP) ó FTPS (FTPSSL).
+## Para poder usar Cetis CWP necesitará algunos requisitos mínimos:
+
+- Versión mínima requerida de PHP: 8.0.1
+
+- Espacio requerido en disco: 190 mb. 
+
+- Transferencia de red requerida del servidor: 5 mb.
+
+- Protocolo de transferencia recomendado: SFTP (SSHFTP) ó FTPS (FTPSSL).
 
 Cetis CWP ocupa los siguientes frameworks para existir:
 

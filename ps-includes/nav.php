@@ -3,7 +3,7 @@
                 <nav class="nav-flex">
                     <div class="menu">
                         <div class="logo">
-                            <a href="./"><img src="ps-contenido/app img/default.png" alt="JOSPROX Logo" /></a>
+                            <a href="panel"><img src="ps-contenido/app img/default.png" alt="Cetis CWP Logo" /></a>
                         </div>
                     </div>
 

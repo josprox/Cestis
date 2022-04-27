@@ -14,7 +14,7 @@
                             <li><a href="panel">Inicio</a></li>
                             <li><a href="perfil">Perfil</a></li>
                             <li><a href="more">Publicaciones</a></li>
-                            <li><a href="ps-conexion/salir.php">Cerrar sesión</a></li>
+                            <li><a href="ps-conexion/salir">Cerrar sesión</a></li>
                         </ul>
                     </div>
                 </nav>

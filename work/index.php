@@ -33,19 +33,21 @@
                 <div class="card-header pb-0 p-3">
                   <div class="row">
                     <div class="col-md-8 d-flex align-items-center">
-                      <h6 class="mb-0">Información del perfil</h6>
-                    </div>
-                    <div class="col-md-4 text-end">
-                      <a href="javascript:;">
-                        <i class="fas fa-user-edit text-secondary text-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Profile"></i>
-                      </a>
+                      <h6 class="mb-0">Información del sistema</h6>
                     </div>
                   </div>
                 </div>
                 <div class="card-body p-3">
                   <p class="text-sm">
-                    Hi, I’m Alec Thompson, Decisions: If you can’t decide, the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality).
+                    Hola, bienvenido al panel de maestros, aquí podrás enviar notificaciones a los estudiantes de sus próximos trabajos, alguna necesidad, etc.
                   </p>
+                  <div class="card-header pb-0 p-3">
+                  <div class="row">
+                    <div class="col-md-8 d-flex align-items-center">
+                      <h6 class="mb-0">Información del maestro</h6>
+                    </div>
+                  </div>
+                </div>
                   <hr class="horizontal gray-light my-4">
                   <ul class="list-group">
                     <li class="list-group-item border-0 ps-0 pt-0 text-sm"><strong class="text-dark">Nombre completo:</strong> &nbsp; <?php echo $row['nombre'];?></li>

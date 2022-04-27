@@ -28,9 +28,16 @@ ON arg_alumno.id_turn = turnos.id WHERE usuarios.id = '$iduser'";
 $resultado = $conexion->query($sql);
 $row = $resultado->fetch_assoc();
 
-$sqlnumcontrols = "SELECT usuarios.id,usuarios.num_control, numcontrols.num, numcontrols.curp FROM usuarios INNER JOIN numcontrols ON numcontrols.num = usuarios.num_control WHERE usuarios.id = '$iduser'";
+$sqlnumcontrols = "SELECT usuarios.id,usuarios.num_control, numcontrols.num, numcontrols.curp, arg_alumno.id_sexo FROM usuarios INNER JOIN numcontrols ON numcontrols.num = usuarios.num_control INNER JOIN arg_alumno ON arg_alumno.id_alm = usuarios.id WHERE usuarios.id = '$iduser'";
 $restsqlnumcontrols = $conexion->query($sqlnumcontrols);
 $control = $restsqlnumcontrols -> fetch_assoc();
+
+$sexo = $control['id_sexo'];
+
+$sql_arg_alumno = "SELECT sexo.sexo FROM sexo INNER JOIN arg_alumno ON sexo.id = arg_alumno.id_sexo WHERE arg_alumno.id_alm = '$iduser'";
+
+$rest_arg_alumno = $conexion->query($sql_arg_alumno);
+$arg_alumno = $rest_arg_alumno -> fetch_assoc();
 
 if (isset($_POST["btn_enviar"])) {
 
@@ -144,6 +151,7 @@ if (isset($_POST["btn_enviar"])) {
                         <p>Turno: <span><?php echo $row['turno'];?></span></p>
                         <p>Discapacidad: <span><?php echo $row['discapacidad'];?></span></p>
                         <p>Curp: <span><?php echo $control['curp'];?></span></p>
+                        <p>Orientación sexual: <span><?php echo $arg_alumno['sexo'];?></span></p>
                 </div>
             </main>
         </div>

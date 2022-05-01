@@ -1,7 +1,7 @@
 <!-- 
     Código basado en JOSPROX MX | JOSPROX Internacional, con la unión de Facilito FX, Paoo CSS, Zara CSS y código de proyecto libre basado en JS.
 
-    para más información de uso y propiedades favor de leer en el siguiente link oficial: https://josprox.com/politicas debido a la creación de este código, el cuál es independiente de la materia, creado con la tecnología de Facitio FX con la licencia de 2015 - 2021, para más información de licencia visite: https://github.com/josprox
+    para más información de uso y propiedades favor de leer en el siguiente link oficial: https://josprox.com/politicas debido a la creación de este código, el cuál es independiente de la materia, creado con la tecnología de Facitio FX con la licencia de 2015 - 2022, para más información de licencia visite: https://github.com/josprox
 
      Por la presente se otorga con cargo, a cualquier persona que obtenga una copia de este software y los archivos de documentación asociados (el "Software"), para operar con el Software con restricciones, incluidos, entre otros, los derechos de uso, copia, modificación, fusión , publicar, distribuir, sublicenciar y / o vender copias del Software, y permitir que las personas a las que se les proporcione el Software lo hagan, sujeto a las siguientes condiciones:
 
@@ -32,7 +32,7 @@ if (isset($_POST["registrar"])) {
 	$filas = $resultadouser -> num_rows;
 	if ($filas > 0) {
 		echo "<script>
-			alert('El usuario ya existe');
+			alert('El usuario ya existe. Error CCWP-681_rgtmst');
 			window.location= './maestros';
 		</script>";
 	}else{
@@ -59,7 +59,7 @@ if (isset($_POST["registrar"])) {
 
   if ($filas1 > 1) {
 		echo "<script>
-			alert('Registro de grupo ha fallado, ya existe uno asignado al maestro.');
+			alert('Registro de grupo ha fallado, ya existe uno asignado al maestro. Error CCWP-682_rgtmst');
 			window.location= './registro_maestro';
 		</script>";
   }else{
@@ -80,7 +80,7 @@ if (isset($_POST["registrar"])) {
     </script>";
     }else{
       echo "<script>
-      alert('Error al registrarse');
+      alert('Error al registrarse. Error CCWP-683_rgtmst');
       window.location= './registro_maestro';
     </script>";
     }

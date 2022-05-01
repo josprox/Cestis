@@ -1,0 +1,108 @@
+@charset "UTF-8";
+@import "color";
+@import "mapa";
+@import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+body{
+    background-color: #93ed9f;
+}
+.foto_portada{
+    margin: 12px auto;
+    img{
+        margin: 0 auto;
+        display: block;
+        width: 350px;
+        height: 220px;
+        object-fit: cover;
+    }
+}
+
+.contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 12px 10px;
+    .tarjeta{
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 12px 10px;
+        border-radius: 12px;
+        h1{
+            font-family: 'Tapestry', cursive;
+            text-align: center;
+            color: $blanco;
+        }
+        p{
+            padding: 3px;
+            margin: 0;
+            text-align: justify;
+        }
+
+        .form_reset{
+            margin: 12px 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            label, input{
+                text-align: center;
+                margin: 12px 0;
+                display: block;
+                width: 100%;
+                background-color: inherit;
+                border: 0;
+            }
+            input{
+                border-bottom: 2px $negro solid;
+                display:flex;
+                flex-direction:column;  
+                outline: none; 
+                background-color: inherit;
+                padding: 3px;
+                transition: .5s;
+            }
+            input:focus{
+                border-bottom: 2px #bd3bbf solid;
+                border-radius: 12px;
+                color: #fff;
+                background-color: rgba(0, 0, 0, 0.2);
+            }
+            .form_boton{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .boton{
+                border: 0;
+                padding: 8px;
+                border-radius: 12px;
+                background-color: rgba(0, 0, 0, 0.2);
+                color: $blanco;
+            }
+        }
+        .master{
+            background-color: rgba(37, 92, 138, 0.2);
+            font-size: 1em;
+            border-radius: 12px;
+            padding: 5px;
+            margin: 0 12px;
+            color: $blanco;
+            option{
+                color: $negro;
+            }
+        }
+    }
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: minmax(50px, auto);
+
+    .bloc-grid{
+        margin: 5px 8px;
+    }
+}
+
+@media screen and (min-width: map-get($bp,c)) {
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -9,7 +9,7 @@ function connect(){
     
     // AGREGANDO CHARSET UTF8
     if (!$conexion->set_charset("utf8")) {
-        printf("Error al cargar el conjunto de caracteres utf8: %s\n", $conexion->error);
+        printf("Error código CCWP_681_utf8, no se puede cargar el conjunto de caracteres utf8: %s\n", $conexion->error);
         exit();
     }
 //$conexion = new mysqli('localhost',"root", "","cestis");

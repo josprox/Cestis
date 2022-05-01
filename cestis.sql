@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-04-2022 a las 22:27:12
+-- Tiempo de generación: 01-05-2022 a las 04:22:16
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -66,11 +66,11 @@ CREATE TABLE `arg_alumno` (
 --
 
 INSERT INTO `arg_alumno` (`id`, `id_gg`, `id_esp`, `id_alm`, `id_turn`, `id_sexo`, `created_at`, `updated_at`) VALUES
-(14, 11, 1, 31, 1, 0, NULL, NULL),
-(16, 11, 1, 33, 1, 0, NULL, NULL),
-(17, 11, 1, 34, 1, 0, NULL, NULL),
-(19, 11, 1, 36, 1, 0, NULL, NULL),
-(22, 11, 1, 38, 1, 0, NULL, NULL);
+(14, 11, 1, 31, 1, 5, NULL, NULL),
+(16, 11, 1, 33, 1, 5, NULL, NULL),
+(17, 11, 1, 34, 1, 6, NULL, NULL),
+(19, 11, 1, 36, 1, 5, NULL, NULL),
+(22, 11, 1, 38, 1, 5, NULL, NULL);
 
 -- --------------------------------------------------------
 

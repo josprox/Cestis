@@ -69,3 +69,28 @@ Ahora para poder empezar a usarlo deberás:
 - Modificar el archivo "./ps-conexion/base_db.php" con los datos correspondientes para poder llevar una conexión exitosa.
 
 Listo, desde ahora podrás correr de una manera segura Cetis CWP.
+
+### Recomendaciones:
+
+- Usar un servidor privado (VPS).
+
+- Se recomienda ejecutarse con seguridad usando el protocolo ssl / tls.
+
+- Se recomienda usar un panel de control para administrar el servidor, puede usar sin problemas Cpanel y Hestia Control Panel. De preferencia debería usar <a href="https://hestiacp.com/">Hestia Control Panel</a>.
+
+- En caso de pruebas y mejoras, se recomienda usar XAMPP con php 9.1.2 o superior, debiado a que, fué programado con esa versión.
+
+- Se le recomienda separar la carpeta "./admin/" con un subdominio, de esta manera podrá ejecutarse de una forma correcta y será más dificil que sufra un ataque al servidor.
+
+#### Licencia.
+
+Un programa creado por JOSPROX MX/ JOSPROX Internacional.
+Licencia: Creative Commons (Autoría - Compartir igual).
+
+- 📫 Copyright (c) 2022 de JOSPROX MX/ JOSPROX Internacional (https://josprox.com/) Tal del presente adquisidor (José Luis Melchor Estrada).
+- - Los códigos son abiertos, puedes ocuparlos pero no se permite su distribución con su supuesta adquisición, de hacerlo se temarán acciones legales.
+- Puedes ayudar mandando mejoras al correo “joss@josprox.ovh”.
+
+Por la presente se otorga permiso, sin cargo, a cualquier persona que obtenga una copia de este software y los archivos de documentación asociados (el "Software"), para operar con el Software sin restricciones, incluidos, entre otros, los derechos de uso, copia, modificación, fusión , publicar, distribuir y sublicenciar.
+
+EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA, INCLUYENDO, PERO NO LIMITADO A, LAS GARANTÍAS DE COMERCIABILIDAD, APTITUD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO LOS AUTORES O TITULARES DE LOS DERECHOS DE AUTOR SERÁN RESPONSABLES DE CUALQUIER RECLAMO, DAÑOS U OTRA RESPONSABILIDAD, YA SEA EN UNA ACCIÓN DE CONTRATO, AGRAVIO O DE OTRO MODO, QUE SURJA DE, FUERA DE O EN RELACIÓN CON EL SOFTWARE O EL USO U OTRAS NEGOCIACIONES EN EL SOFTWARE.

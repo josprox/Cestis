@@ -1,5 +1,5 @@
 # Cetis Control Web Panel
-<img src="CetisCWP.png" alt="Cetis Control Web Panel"/>
+<img src="./ps-contenido/img data/CetisCWP.png" alt="Cetis Control Web Panel"/>
 
 ## Misión
 
@@ -95,11 +95,11 @@ Por la presente se otorga permiso, sin cargo, a cualquier persona que obtenga un
 
 EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA, INCLUYENDO, PERO NO LIMITADO A, LAS GARANTÍAS DE COMERCIABILIDAD, APTITUD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO LOS AUTORES O TITULARES DE LOS DERECHOS DE AUTOR SERÁN RESPONSABLES DE CUALQUIER RECLAMO, DAÑOS U OTRA RESPONSABILIDAD, YA SEA EN UNA ACCIÓN DE CONTRATO, AGRAVIO O DE OTRO MODO, QUE SURJA DE, FUERA DE O EN RELACIÓN CON EL SOFTWARE O EL USO U OTRAS NEGOCIACIONES EN EL SOFTWARE.
 
+<img src="./ps-contenido/img data/byncsa.jpg" alt="Atribución-NoComercial 4.0 Internacional - Compartir igual"/>
+
 Reconocimiento - Compartir Igual (by-sa)
 
 Esta licencia permite el uso comercial de la obra y de las posibles obras derivadas, pero la distribución de éstas se debe hacer con una licencia igual a la que regula la obra original, es decir, la obra derivada que se lleve a cabo a partir de la obra original deberá ser explotada bajo la misma licencia.
-
-<img src="./ps-contenido/licencias/reconocimiento.png" alt="Compartir Igual (by-sa)"/>
 
 Atribución-NoComercial 4.0 Internacional (CC BY-NC 4.0)
 
@@ -114,5 +114,3 @@ Bajo los siguientes términos:
 - Atribución — Usted debe dar crédito de manera adecuada, brindar un enlace a la licencia, e indicar si se han realizado cambios. Puede hacerlo en cualquier forma razonable, pero no de forma tal que sugiera que usted o su uso tienen el apoyo de la licencia.
 
 - NoComercial — Usted no puede hacer uso del material con propósitos comerciales.
-
-<img src="./ps-contenido/licencias/bync.jpg" alt="Compartir Igual (by-sa)"/>

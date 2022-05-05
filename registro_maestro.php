@@ -123,7 +123,7 @@ if (isset($_POST["registrar"])) {
         <div class="section">
           <h3>llegó el momento de asignarte un grupo</h3>
           <select name="sexo" class="form-wrapper" aria-label="Default select example" required>
-            <option selected>¿Cuál es tú orientación sexual?*</option>
+            <option selected>¿Cuál es tú Genero?*</option>
             <?php
             $sexo = "SELECT * FROM `sexo`";
 

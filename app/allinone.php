@@ -158,7 +158,7 @@ if ($filas1 > 1) {
     <input type="text" name="disc" id="disc" placeholder="discapacidad" required>
 
     <select name="genero" class="form-wrapper" aria-label="Default select example" required>
-      <option selected>¿Cuál es tú orientación sexual?</option>
+      <option selected>¿Cuál es tú Género?</option>
       <?php
       $sexo = "SELECT * FROM `sexo`";
 

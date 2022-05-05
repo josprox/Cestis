@@ -151,7 +151,7 @@ if (isset($_POST["btn_enviar"])) {
                         <p>Turno: <span><?php echo $row['turno'];?></span></p>
                         <p>Discapacidad: <span><?php echo $row['discapacidad'];?></span></p>
                         <p>Curp: <span><?php echo $control['curp'];?></span></p>
-                        <p>Orientación sexual: <span><?php echo $arg_alumno['sexo'];?></span></p>
+                        <p>Género: <span><?php echo $arg_alumno['sexo'];?></span></p>
                 </div>
             </main>
         </div>

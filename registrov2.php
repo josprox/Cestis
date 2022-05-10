@@ -21,7 +21,7 @@ if (isset($_SESSION['id_usuario'])) {
 if (isset($_POST["registrar"])) {
     $usuario = mysqli_real_escape_string($conexion,$_POST['user']);
 	$password = mysqli_real_escape_string($conexion,$_POST['pass']);
-	$password_encriptada = sha1($password);
+	$password_encriptada = password_hash($password,PASSWORD_BCRYPT,["cost"=>10]);
 	$correo = mysqli_real_escape_string($conexion,$_POST['correo']);
 	$num_control = mysqli_real_escape_string($conexion,$_POST['num_ctr']);
 	$discapacidad = mysqli_real_escape_string($conexion,$_POST['disc']);

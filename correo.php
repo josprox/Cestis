@@ -23,7 +23,7 @@ if (isset($_POST['restaurar'])) {
     $numcontrol = mysqli_real_escape_string($conexion, $_POST['numcontrol']);
     $correo = mysqli_real_escape_string($conexion, $_POST['correo']);
     $password = mysqli_real_escape_string($conexion, $_POST['newcontra']);
-    $password_encriptada = sha1($password);
+    $password_encriptada = password_hash($password,PASSWORD_BCRYPT,["cost"=>10]);
 
     $mast = mysqli_real_escape_string($conexion, $_POST['master']);
     $master = (int)$mast;
@@ -40,7 +40,7 @@ if (isset($_POST['restaurar'])) {
             $updatefull = $conexion->query($update);
             echo "<script>
                 alert('La operación se ha completado correctamente');
-                window.location= './';
+                window.location= './maestros';
             </script>";
         } else{
             echo "<script>
@@ -66,7 +66,7 @@ if (isset($_POST['restaurar'])) {
             </script>";
         } else{
             echo "<script>
-                alert('La operación no se ha completado correctamente,, código de error CCWP-alumno_update_241');
+                alert('La operación no se ha completado correctamente, código de error CCWP-alumno_update_241');
                 window.location= './correo';
             </script>";
         }

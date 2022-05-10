@@ -22,19 +22,27 @@ if (isset($_SESSION['id_usuario'])) {
 if (isset($_POST["ingresar"])) {
     $usuario = mysqli_real_escape_string($conexion, $_POST['user']);
     $password = mysqli_real_escape_string($conexion, $_POST['pass']);
-    $password_encriptada = sha1($password);
-    $sql = "SELECT id FROM usuarios WHERE usuario = '$usuario' and password = '$password_encriptada'";
+    $sql = "SELECT id, password FROM usuarios WHERE usuario = '$usuario'";
     $resultado = $conexion->query($sql);
     $rows = $resultado->num_rows;
     if ($rows > 0) {
         $row = $resultado->fetch_assoc();
-        $_SESSION['id_usuario'] = $row['id'];
-        header("Location: ./../panel");
+		    $password_encriptada = $row['password'];
+
+        if(password_verify($password,$password_encriptada) == TRUE){
+          $_SESSION['id_usuario'] = $row['id'];
+          header("Location: ../panel");
+        }else{
+          echo "<script>
+          alert('Contraseña incorrecta, vuélvelo a intentar o cambia la contraseña. Error CCWP-232_allinone');
+          window.location= './allinone';
+          </script>";
+        }
     } else {
         echo "<script>
-			alert('Usuario o contraseña incorrecta');
-			window.location= './';
-		</script>";
+          alert('Ninguno de los dos datos existen. Error CCWP-220_allinone');
+          window.location= './allinone';
+        </script>";
     }
 }
 
@@ -42,7 +50,7 @@ if (isset($_POST["ingresar"])) {
 if (isset($_POST["registrar"])) {
   $usuario = mysqli_real_escape_string($conexion,$_POST['user']);
 $password = mysqli_real_escape_string($conexion,$_POST['pass']);
-$password_encriptada = sha1($password);
+$password_encriptada = password_hash($password,PASSWORD_BCRYPT,["cost"=>10]);
 $correo = mysqli_real_escape_string($conexion,$_POST['correo']);
 $num_control = mysqli_real_escape_string($conexion,$_POST['num_ctr']);
 $discapacidad = mysqli_real_escape_string($conexion,$_POST['disc']);

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-05-2022 a las 04:27:45
+-- Tiempo de generación: 10-05-2022 a las 23:56:38
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -277,9 +277,9 @@ CREATE TABLE `maestros` (
 --
 
 INSERT INTO `maestros` (`id`, `usuario`, `password`, `correo`, `img`, `nombre`, `discapacidad`, `created_at`, `updated_at`) VALUES
-(10, 'emma', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'emma@josprox.com', 'IMG_20220211_104222.webp', 'Emma N', 'Ninguna', NULL, '2022-04-24 05:55:04'),
-(11, 'puff', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'kenia@josprox.com', 'IMG_20220211_120541.webp', 'Kenia N', 'Ninguna', NULL, '2022-04-24 05:55:13'),
-(12, 'norma', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'norma@josprox.com', 'Norma.webp', 'Norma Carreón', 'Ninguna', NULL, '2022-04-24 05:55:22');
+(10, 'emma', '$2y$10$NHxPsDstdm5cwBd.G2eXvOoJ4BuR8fM9/4xJ7ELM/iPXI7g3pWoOy', 'emma@josprox.com', 'IMG_20220211_104222.webp', 'Emma N', 'Ninguna', NULL, '2022-04-24 05:55:04'),
+(11, 'puff', '$2y$10$LIBjiQeTPbjCJ8BuNftcmOQi61e5tWZQ3Rg5BGQ2Jc76K03opT2hO', 'kenia@josprox.com', 'IMG_20220211_120541.webp', 'Kenia N', 'Ninguna', NULL, '2022-04-24 05:55:13'),
+(12, 'norma', '$2y$10$tslHOTK1iLU3OV7UUjyJouG51w0FceopJ8MfY3L95AU0yLneOqN.q', 'norma@josprox.com', 'Norma.webp', 'Norma Carreón', 'Ninguna', NULL, '2022-04-24 05:55:22');
 
 -- --------------------------------------------------------
 
@@ -335,7 +335,9 @@ INSERT INTO `notifications` (`id`, `tipo`, `Contenido`, `created_at`, `updated_a
 (9, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.1.1 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP#timeline-versi%C3%B3n-611-soluci%C3%B3n-de-errores\" class=\"text-white\">Clic aquí.</a>', '2022-04-25 01:16:36', '2022-04-25 01:19:03'),
 (10, 'Información', 'Ahora podrás descargar el proyecto COMPLETO desde github. <a href=\"https://github.com/josprox/Cetis-CWP/\" class=\"text-white\">Vamos allá.</a>', '2022-04-25 01:20:31', '2022-04-25 01:21:05'),
 (11, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 6.2', '2022-05-01 07:25:37', '2022-05-01 07:25:37'),
-(12, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.2 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.2\" class=\"text-white\">Clic aquí.</a>', '2022-05-01 07:26:43', '2022-05-01 07:26:43');
+(12, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.2 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.2\" class=\"text-white\">Clic aquí.</a>', '2022-05-01 07:26:43', '2022-05-01 07:26:43'),
+(13, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 6.3.3', '2022-05-11 02:54:10', '2022-05-11 02:54:10'),
+(14, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.3.3 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.3\" class=\"text-white\">Clic aquí.</a>', '2022-05-11 02:54:42', '2022-05-11 02:54:42');
 
 -- --------------------------------------------------------
 
@@ -523,7 +525,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'José Luis Melchor Estrada', 'joss@int.josprox.com', NULL, '$2y$10$1L1ZmE6gTQ1NYlCwb4GQBesiM0g1Quyzg3lOSMmdEdxCfcAJFVUyW', 'Tjpjpip1BqRH1vdQ1R5ddLEShPQRH1nq7c8swRcA1VeLItmcmqBxRcXvEL9j', '2022-04-15 05:12:26', '2022-04-15 05:12:26');
+(1, 'José Luis Melchor Estrada', 'joss@int.josprox.com', NULL, '$2y$10$1L1ZmE6gTQ1NYlCwb4GQBesiM0g1Quyzg3lOSMmdEdxCfcAJFVUyW', 'NpYbJnGnoQXPawzJeTrw9NNLtBq80rz7OmaaKlJLFN8TEoGwF6x5EW4lJoEe', '2022-04-15 05:12:26', '2022-04-15 05:12:26');
 
 -- --------------------------------------------------------
 
@@ -549,11 +551,11 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `usuario`, `password`, `correo`, `img`, `num_control`, `nombre`, `discapacidad`, `created_at`, `updated_at`) VALUES
-(31, 'josprox', '2b7dece1db9cea030242b61f343bd6870970ba26', 'joss@int.josprox.com', 'jossestrada.webp', '19309060540339', 'Melchor Estrada José Luis', 'Ninguna', NULL, '2022-04-24 05:56:50'),
-(33, 'Alextremo', '2b7dece1db9cea030242b61f343bd6870970ba26', 'Rpramiro18@gmail.com', 'main.webp', '19309060540379', 'Paz García Alejandro', 'Ninguna', NULL, '2022-04-22 05:35:44'),
-(34, 'xime04', '5387141cab2eab1e8da198dbf482feedf9a07f8e', 'anemixsanchez3@gmail.com', 'main.webp', '19309060540247', 'Aranda Sánchez Ximena', 'Ninguna', NULL, '2022-04-14 01:58:50'),
-(36, 'Isra Lara', '41ccd4dc2cd47cec179a8378973c5994b7a1c987', 'isra.lara04@gmail.com', 'isra.webp', '19309060540318', 'Lara Prieto Jefte Israel', 'Ninguna', NULL, '2022-04-24 05:57:01'),
-(38, 'eriicksanchez_', '2b7dece1db9cea030242b61f343bd6870970ba26', 'ericksanchez.100504@gmail.com', 'erick.webp', '19309060540234', 'Alvirde Sánchez Erick', 'Ninguna', NULL, '2022-04-24 05:57:14');
+(31, 'josprox', '$2y$10$xkxiPg4AtAmqMP9KLApVUehE3f3fmhMwl.84j6.uK1UDfoBJkjfzS', 'joss@int.josprox.com', 'jossestrada.webp', '19309060540339', 'Melchor Estrada José Luis', 'Ninguna', NULL, '2022-04-24 05:56:50'),
+(33, 'Alextremo', '$2y$10$YwWGC1k0r9VmJVi.sJAWJe8DizBP4CN9s7R/Z0O/9IrS0/eccpHt2', 'Rpramiro18@gmail.com', 'main.webp', '19309060540379', 'Paz García Alejandro', 'Ninguna', NULL, '2022-04-22 05:35:44'),
+(34, 'xime04', '$2y$10$zZPYHTTOU82ESeML82YuR.22QGByP4HRFK1FV5hkGSlERgSktifZ2', 'anemixsanchez3@gmail.com', 'main.webp', '19309060540247', 'Aranda Sánchez Ximena', 'Ninguna', NULL, '2022-04-14 01:58:50'),
+(36, 'Isra Lara', '$2y$10$Iopw2eHcwFyWoUBmEp.xUeZEHHV7MuHqjtpbBauAH5sYIiWxvQSC.', 'isra.lara04@gmail.com', 'isra.webp', '19309060540318', 'Lara Prieto Jefte Israel', 'Ninguna', NULL, '2022-04-24 05:57:01'),
+(38, 'eriicksanchez_', '$2y$10$y9qPGhcUSfcfDz0FBAE6Q.Wwy64rC0BUKVA9cVlOypy8pjSEHXatG', 'ericksanchez.100504@gmail.com', 'erick.webp', '19309060540234', 'Alvirde Sánchez Erick', 'Ninguna', NULL, '2022-04-24 05:57:14');
 
 --
 -- Índices para tablas volcadas
@@ -757,7 +759,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de la tabla `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `numcontrols`

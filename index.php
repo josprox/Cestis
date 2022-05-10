@@ -22,17 +22,24 @@ if (isset($_SESSION['id_usuario'])) {
 if (isset($_POST["ingresar"])) {
     $usuario = mysqli_real_escape_string($conexion, $_POST['user']);
     $password = mysqli_real_escape_string($conexion, $_POST['pass']);
-    $password_encriptada = sha1($password);
-    $sql = "SELECT id FROM usuarios WHERE usuario = '$usuario' and password = '$password_encriptada'";
+    $sql = "SELECT id, password FROM usuarios WHERE usuario = '$usuario'";
     $resultado = $conexion->query($sql);
     $rows = $resultado->num_rows;
     if ($rows > 0) {
         $row = $resultado->fetch_assoc();
-        $_SESSION['id_usuario'] = $row['id'];
-        header("Location: panel");
+		$password_encriptada = $row['password'];
+		if(password_verify($password,$password_encriptada) == TRUE){
+			$_SESSION['id_usuario'] = $row['id'];
+			header("Location: panel");
+		}else{
+			echo "<script>
+			alert('Contraseña incorrecta, vuélvelo a intentar o cambia la contraseña. Error CCWP-232_alm_login');
+			window.location= './';
+		  </script>";
+		  }
     } else {
         echo "<script>
-			alert('Usuario o contraseña incorrecta. Error CCWP-220_alm_login');
+			alert('Ninguno de los dos datos existen. Error CCWP-220_alm_login');
 			window.location= './';
 		</script>";
     }

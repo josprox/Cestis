@@ -107,7 +107,7 @@ if (isset($_POST["registrar"])) {
 <html lang="es-MX" >
 <head>
   <meta charset="UTF-8">
-  <title>Regístrate | Cetis CWP</title>
+  <title>Cetis CWP | Regístrate</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"><link rel="stylesheet" href="ps-contenido/css/registro.css">
   <?php include "ps-includes/metas.php"; include "ps-plugins/adsense/ads.php"; ?>

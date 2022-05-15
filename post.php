@@ -41,9 +41,7 @@ $tuturno = $restfull['id_turn'];
 <html lang="es-MX">
     <head>
     <?php include "ps-includes/metas.php"; include "ps-plugins/adsense/ads.php"; ?>
-        <title>
-            Publicaciones
-    </title>
+        <title>Cetis CWP | Publicaciones</title>
         <link rel="stylesheet" href="ps-contenido/css/paps.css" />
         <link rel="stylesheet" href="ps-contenido/css/modal.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />

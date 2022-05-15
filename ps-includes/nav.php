@@ -11,10 +11,11 @@
                         <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
                         <input type="checkbox" id="check" />
                         <ul class="links">
-                            <li><a href="panel">Inicio</a></li>
-                            <li><a href="perfil">Perfil</a></li>
-                            <li><a href="more">Publicaciones</a></li>
-                            <li><a href="ps-conexion/salir">Cerrar sesión</a></li>
+                            <li><a href="panel"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                            <li><a href="perfil"><i class="fa-solid fa-user"></i> Perfil</a></li>
+                            <li><a href="more"><i class="fa-solid fa-signs-post"></i> Publicaciones</a></li>
+                            <li><a href="search"><i class="fa-solid fa-magnifying-glass"></i> Buscar</a></li>
+                            <li><a href="ps-conexion/salir"><i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar sesión</a></li>
                         </ul>
                     </div>
                 </nav>

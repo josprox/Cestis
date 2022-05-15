@@ -52,7 +52,7 @@ if (!$_GET) {
 
 ?>
     
-    <title>Blog | JOSPROX</title>
+    <title>Cetis CWP | Publicaciones</title>
 
     <?php
     include "ps-includes/metas.php";

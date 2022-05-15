@@ -83,7 +83,7 @@ if (isset($_POST['restaurar'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olvidé mi contraseña | Cetis CWP</title>
+    <title>Cetis CWP | Olvidé mi contraseña</title>
     <link rel="stylesheet" href="ps-contenido/bootstrap/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="ps-contenido/scss/correos.css">
 </head>

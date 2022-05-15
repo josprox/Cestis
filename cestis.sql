@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-05-2022 a las 23:56:38
+-- Tiempo de generación: 15-05-2022 a las 03:33:10
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -337,7 +337,9 @@ INSERT INTO `notifications` (`id`, `tipo`, `Contenido`, `created_at`, `updated_a
 (11, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 6.2', '2022-05-01 07:25:37', '2022-05-01 07:25:37'),
 (12, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.2 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.2\" class=\"text-white\">Clic aquí.</a>', '2022-05-01 07:26:43', '2022-05-01 07:26:43'),
 (13, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 6.3.3', '2022-05-11 02:54:10', '2022-05-11 02:54:10'),
-(14, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.3.3 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.3\" class=\"text-white\">Clic aquí.</a>', '2022-05-11 02:54:42', '2022-05-11 02:54:42');
+(14, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.3.3 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.3\" class=\"text-white\">Clic aquí.</a>', '2022-05-11 02:54:42', '2022-05-11 02:54:42'),
+(15, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 6.4 beta 1', '2022-05-15 06:31:23', '2022-05-15 06:31:23'),
+(16, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.4 beta 1 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.4-beta.1\" class=\"text-white\">Clic aquí.</a>', '2022-05-15 06:32:56', '2022-05-15 06:32:56');
 
 -- --------------------------------------------------------
 
@@ -759,7 +761,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de la tabla `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `numcontrols`

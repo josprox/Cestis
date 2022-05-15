@@ -102,7 +102,7 @@ if (isset($_POST["btn_enviar"])) {
 <html lang="es-MX">
     <head>
         <?php include "ps-includes/metas.php"; include "ps-plugins/adsense/ads.php"; ?>
-        <title>Cestis CWP | Perfil</title>
+        <title>Cetis CWP | Perfil</title>
         <link rel="stylesheet" href="ps-contenido/css/paps.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     </head>

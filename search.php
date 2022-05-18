@@ -20,7 +20,7 @@ if (!isset($_SESSION['id_usuario'])) {
 }
 $iduser = $_SESSION['id_usuario'];
 
-$sql = "SELECT usuarios.nombre, usuarios.img, usuarios.num_control, usuarios.discapacidad, gradgrup.grado,gradgrup.grupo, especialidades.especialidad, turnos.turno FROM usuarios
+$sql = "SELECT usuarios.img FROM usuarios
 INNER JOIN arg_alumno ON usuarios.id = arg_alumno.id_alm INNER JOIN gradgrup
 ON arg_alumno.id_gg = gradgrup.id INNER JOIN especialidades
 ON especialidades.id = arg_alumno.id_esp INNER JOIN turnos
@@ -35,7 +35,7 @@ $row = $resultado->fetch_assoc();
 <head>
     <?php include "ps-includes/metas.php"; ?>
     <title>Cetis CWP | Busqueda</title>
-    <link rel="stylesheet" href="./ps-contenido/scss/search.css">
+    <link rel="stylesheet" href="./ps-contenido/scss/search.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script src="https://kit.fontawesome.com/4a5e39d1d1.js" crossorigin="anonymous"></script>
 </head>
@@ -44,10 +44,14 @@ $row = $resultado->fetch_assoc();
     <div class="search">
         <img src="./ps-contenido/app img/cover.png" alt="">
         <form class="formulario" action="./resultados" method="get">
-            <p>Versión beta 6.4 actualizado el día: 14/05/22</p>
+            <p>Versión 6.4 actualizado el día: 17/05/22</p>
             <label for="">¿Qué deseas buscar?</label>
-            <input type="text" name="busqueda" type="search" placeholder="Buscar...">
+            <input type="text" name="busqueda" id="busqueda" type="search" placeholder="Buscar...">
         </form>
+    </div>
+
+    <div class="content_cards contenedor" id="datos">
+        <p>Si ves este mensaje, está fallando tú conexión, favor de intentarlo más tarde.</p>
     </div>
     
     <nav class="content_end">
@@ -98,5 +102,9 @@ $row = $resultado->fetch_assoc();
         <hr>
         <p>Todos los derechos reservados JOSPROX MX | Internacional</p>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <script src="./ps-contenido/js/jquery-3.6.0.min.js"></script>
+      <script src="./ps-contenido/js/search.js"></script>
 </body>
 </html>

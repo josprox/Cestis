@@ -18,8 +18,6 @@ $tugradgrup = $restfull['id_gg'];
 $tuespecialidad = $restfull['id_esp'];
 $tuturno = $restfull['id_turn'];
 
-echo "<p>Session_gradgrup: ".$tugradgrup.", session_esp: ".$tuespecialidad.", session_turno: ".$tuturno."</p>";
-
 $query = "SELECT maestros.nombre, maestros.img, publicaciones.titulo, publicaciones.vista FROM maestros INNER JOIN arg_public ON maestros.id = arg_public.id_mst INNER JOIN publicaciones ON arg_public.id_pbc = publicaciones.id WHERE arg_public.id_gradgrup = $tugradgrup && arg_public.id_esp = $tuespecialidad && arg_public.id_turno = $tuturno ORDER BY publicaciones.id DESC";
 
 $salida = "";
@@ -33,20 +31,28 @@ $resultado = $mysqli->query($query);
 
 if($resultado -> num_rows > 0){
     while($fila = $resultado->fetch_assoc()){
+
         $salida.= '
-    <div class="card">
-            <h5 class="card-header">'.$fila['nombre'].'</h5>
-            <div class="card-body">
-              <h5 class="card-title">'.$fila['titulo'].'</h5>
-              <p class="card-text">'.$fila['vista'].'</p>
-              <a href="post?titulo='.$fila['titulo'].'" class="btn btn-primary">Ir a la publicación...</a>
+        <div class="tarjetas">
+                <div class="fch_black">
+
+                    <div class="raw_item">
+                        <img src="./ps-contenido/img/maestros/'.$fila['img'].'" alt="">
+                    </div>
+
+                    <div class="tits">
+                        <h1>Nombre: '.$fila['nombre'].'</h1>
+                        <h2>Actividad: '.$fila['titulo'].'</h2>
+                    </div>
+                </div>
+                <p>'.$fila['vista'].'</p>
+                <br>
+                <a href="post?titulo='.$fila['titulo'].'">Acceder</a>
             </div>
-          </div>
-          <br>
-    ';
+        ';
     }
 }else{
-    $salida .= "No hay datos";
+    $salida .= "<center><p>No hay datos o tu busqueda ha fallado, solo puedes buscar las actividades o nombres de los profesores.</p></center>";
 }
 
 echo $salida;

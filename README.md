@@ -63,7 +63,7 @@ Si trabajas en un servidor:
 
 - Crea una base de datos.
 
-- accede a tu dominio y al archivo correspondiente "installer.php", ejemplo: https://tudominio.com/installer.php
+- accede a tu dominio y al archivo correspondiente "installer.php", ejemplo: ("https://tudominio.com/installer.php")
 
 - Sigue las instrucciones para llevar a cabo la instalación, recuerda completar todos los campos y cumplir con los requisitos mínimos.
 
@@ -73,19 +73,19 @@ Si trabajas en un localhost (usando de ejemplo xampp):
 
 - Descarga el archivo comprimido y guardalo en una raíz de documentos de tú servidor. Si ocupas XAMPP puede ser: C:\xampp\htdocs\
 
-- Ahora creamos una carpeta llamada Cetis CWP (esto es un ejemplo, puedes llamarlo cómo gustes): C:\xampp\htdocs\cetis cwp\
+- Ahora creamos una carpeta llamada Cetis CWP (esto es un ejemplo, puedes llamarlo cómo gustes): C:\xampp\htdocs\cetis-cwp\
 
 - Descomprime el archivo zip dentro de la carpeta antes creada, se descomprimirá la carpeta /installer/, accede a ella y copia o corta los dos archivos a tu raiz. Una vez hecho esto podrás eliminar la carpeta /installer/ y el zip installer.zip, dejando solo el zip de la versión descargada y el archivo installer.php.
 
 - Crea una base de datos.
 
-- Ve al directorio antes creado con dirección a "installer.php", ejemplo: https://localhost/cetis cwp/installer.php
+- Ve al directorio antes creado con dirección a "installer.php", ejemplo: ("https://localhost/cetis-cwp/installer.php")
 
 - Sigue las instrucciones para llevar a cabo la instalación, recuerda completar todos los campos y cumplir con los requisitos mínimos.
 
 - Una vez instalado te saldrá el siguiente mensaje 'Se ha insertado los datos de manera correcta.' y te redireccionará a la raíz de la carpeta.
 
-#### Instalación para versiones anteriores a "TIMELINET versión 6.4 beta 1"
+#### Instalación para versiones anteriores a "TIMELINET versión 6.3.3"
 
 Descarga el archivo comprimido y guardalo en una raíz de documentos de tú servidor. Si ocupas XAMPP puede ser:
 C:\xampp\htdocs\

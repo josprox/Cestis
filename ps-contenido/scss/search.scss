@@ -28,15 +28,8 @@ body{
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: minmax(50px, auto);
     grid-template-areas:
-    "srh"
-    "ct";
-    @media screen and (min-width: 800px) {
-        &{
-            grid-template-areas:
-            "ct"
-            "srh";
-        }
-    }
+    "ct"
+    "srh";
 }
 
 .search{
@@ -82,10 +75,6 @@ body{
 
 .content_end{
     grid-area: ct;
-    position: absolute;
-    left: 0px; /*A la derecha deje un espacio de 0px*/
-    right: 0px; /*A la izquierda deje un espacio de 0px*/
-    bottom: 0px; /*Abajo deje un espacio de 0px*/
     z-index: 0;
     background: #b3b3b3;
     @media screen and (min-width: 800px) {
@@ -222,5 +211,69 @@ body{
         border: none;
         height: 1px;
         background-color: #7a7a7a;
+    }
+}
+
+.content_cards{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: minmax(50px, auto);
+    @media screen and (min-width: 600px) {
+        &{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media screen and (min-width: 920px) {
+        &{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    .tarjetas{
+        background-color: #b3b3b3;
+        padding: 12px;
+        margin: 12px 5px;
+        border-radius: 12px;
+        .fch_black{
+            padding: 8px;
+            background-color: #7a7a7a;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            flex-direction: row;
+            border-radius: 12px;
+
+            .raw_item{
+                width: 5rem;
+                img{
+                    margin-right: 8px;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                }
+            }
+
+            .tits{
+                -webkit-flex: auto;
+	            flex: auto;
+                h1, h2{
+                    font-size: 1.2em;
+                }
+            }
+        }
+
+        p{
+            margin: 12px 5px;
+            text-align: justify;
+        }
+
+        a{
+            border: none;
+            background-color: #8f1491;
+            color: #fff;
+            padding: 8px;
+            border-radius: 12px;
+            margin: 12px 5px;
+        }
+
     }
 }

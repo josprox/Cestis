@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-05-2022 a las 03:33:10
+-- Tiempo de generación: 24-05-2022 a las 02:05:47
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `cestis`
+-- Base de datos: `cetis_cwp`
 --
 
 -- --------------------------------------------------------
@@ -339,7 +339,11 @@ INSERT INTO `notifications` (`id`, `tipo`, `Contenido`, `created_at`, `updated_a
 (13, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 6.3.3', '2022-05-11 02:54:10', '2022-05-11 02:54:10'),
 (14, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.3.3 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.3\" class=\"text-white\">Clic aquí.</a>', '2022-05-11 02:54:42', '2022-05-11 02:54:42'),
 (15, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 6.4 beta 1', '2022-05-15 06:31:23', '2022-05-15 06:31:23'),
-(16, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.4 beta 1 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.4-beta.1\" class=\"text-white\">Clic aquí.</a>', '2022-05-15 06:32:56', '2022-05-15 06:32:56');
+(16, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.4 beta 1 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.4-beta.1\" class=\"text-white\">Clic aquí.</a>', '2022-05-15 06:32:56', '2022-05-15 06:32:56'),
+(17, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 6.4', '2022-05-24 04:57:55', '2022-05-24 04:57:55'),
+(18, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.4 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.4\" class=\"text-white\">Clic aquí.</a>', '2022-05-24 04:58:41', '2022-05-24 04:58:41'),
+(19, 'Información', 'Ahora podrás instalar Cetis CWP con tan solo muy pocos pasos, descarga desde \"releases\" el archivo \"installer.rar\" de la versión que necesites.', '2022-05-24 05:00:37', '2022-05-24 05:00:37'),
+(20, 'Alerta primaria', 'Cetis CWP 6.4 es la versión más actualizada y estable. Un sistema de JOSPROX MX | Internacional', '2022-05-24 05:02:33', '2022-05-24 05:03:09');
 
 -- --------------------------------------------------------
 
@@ -761,7 +765,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de la tabla `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT de la tabla `numcontrols`

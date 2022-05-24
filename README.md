@@ -3,7 +3,7 @@
 
 ## Actualiza a Cetis Control Web Panel
 
-Esta es la versión original de Cestis, se dejó de dar soporte para darle paso a Cetis CWP, si te interesa <a href=""> dá clic aquí</a>.
+Esta es la versión original de Cestis, se dejó de dar soporte para darle paso a Cetis CWP, si te interesa <a href="https://github.com/josprox/Cetis-CWP"> dá clic aquí</a>.
 
 ## Misión
 

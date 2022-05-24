@@ -3,7 +3,7 @@
 //Valores de la conexión
     $usuario = "root";
     $contra = "";
-    $database = "cestis";
+    $database = "cetis_cwp";
     $host = "localhost";
 
 ?>

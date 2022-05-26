@@ -1,8 +1,11 @@
 @charset "UTF-8";
+<<<<<<< HEAD
 /* El siguiente código NO PUEDE SER UTILIZADO, MODIFICADO NI COPIADO, el código tiene licencia de JOSPROX MX
 basado en Facilito(FX) lo cuál el uso de este sin una autorización por medio de JOSPEOX será un código ilegal
 y con posibilidad de dar de baja el sitio web que maneje este código. Para sacar una autorización contactar
 por el siguiente medio: sitio web https://josprox.com/contacto */
+=======
+>>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad
 body {
   margin: 0;
   background: #3ffbf9;
@@ -48,6 +51,13 @@ a.active {
   list-style: none;
 }
 
+<<<<<<< HEAD
+=======
+/* El siguiente código NO PUEDE SER UTILIZADO, MODIFICADO NI COPIADO, el código tiene licencia de JOSPROX MX
+basado en Facilito(FX) lo cuál el uso de este sin una autorización por medio de JOSPEOX será un código ilegal
+y con posibilidad de dar de baja el sitio web que maneje este código. Para sacar una autorización contactar
+por el siguiente medio: sitio web https://josprox.com/contacto */
+>>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad
 .grid-home {
   display: -ms-grid;
   display: grid;
@@ -110,6 +120,7 @@ nav {
   height: 60px;
   -o-object-fit: cover;
      object-fit: cover;
+<<<<<<< HEAD
   margin-left: 12px;
 }
 
@@ -117,6 +128,8 @@ nav {
   border-radius: 12px;
   width: 100px;
   height: 50px;
+=======
+>>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad
 }
 
 @media screen and (min-width: 858px) {
@@ -194,10 +207,24 @@ nav {
   border-bottom-color: #67f09e;
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 885px) {
   .logo img {
     width: 120px;
     margin-left: 0;
+=======
+.logo {
+  margin-top: -18px;
+}
+
+.logo img {
+  width: 200px;
+}
+
+@media screen and (max-width: 885px) {
+  .logo img {
+    width: 150px;
+>>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad
   }
 }
 
@@ -322,6 +349,7 @@ nav {
   transition: .5s;
 }
 
+<<<<<<< HEAD
 h1.titulos {
   font-size: 1.2em;
   padding: 12px;
@@ -354,6 +382,8 @@ img.img-public {
   }
 }
 
+=======
+>>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad
 .barras {
   position: absolute;
   bottom: 0;
@@ -431,12 +461,15 @@ img.img-public {
   background: linear-gradient(180deg, #ec82e1 0%, #aa90fe 50%, #61cce2 100%);
 }
 
+<<<<<<< HEAD
 .gd-sec .contenido_post div {
   padding: 3px;
   margin: 3px 8px;
   color: #fff;
 }
 
+=======
+>>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad
 .gd-asd {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -583,7 +616,10 @@ img.img-public {
 }
 
 .ord-per .btn1 {
+<<<<<<< HEAD
   cursor: pointer;
+=======
+>>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad
   border-radius: 12px;
   margin: 12px 8px;
   background: #a945c7;
@@ -626,6 +662,7 @@ img.img-public {
   list-style: none;
 }
 
+<<<<<<< HEAD
 .pdf {
   border-radius: 12px;
   display: block;
@@ -634,6 +671,8 @@ img.img-public {
   height: 100%;
 }
 
+=======
+>>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad
 table, th, td {
   background: #eff3f5;
   border-radius: 12px;
@@ -791,6 +830,7 @@ table, th, td {
   margin: auto;
 }
 
+<<<<<<< HEAD
 p#txtimg {
   text-align: center;
   color: #fff;
@@ -828,10 +868,13 @@ input#btn_enviar {
   cursor: pointer;
 }
 
+=======
+>>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad
 @media screen and (min-width: 600px) {
   .contenedor {
     width: 96%;
   }
+<<<<<<< HEAD
   .pdf {
     border-radius: 12px;
     display: block;
@@ -839,6 +882,8 @@ input#btn_enviar {
     width: 96%;
     height: 350px;
   }
+=======
+>>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad
 }
 
 @media screen and (min-width: 800px) {

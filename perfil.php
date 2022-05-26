@@ -1,7 +1,11 @@
 <!-- 
     Código basado en JOSPROX MX | JOSPROX Internacional, con la unión de Facilito FX, Paoo CSS, Zara CSS y código de proyecto libre basado en JS.
 
+<<<<<<< HEAD
     para más información de uso y propiedades favor de leer en el siguiente link oficial: https://josprox.com/politicas debido a la creación de este código, el cuál es independiente de la materia, creado con la tecnología de Facitio FX con la licencia de 2015 - 2022, para más información de licencia visite: https://github.com/josprox
+=======
+    para más información de uso y propiedades favor de leer en el siguiente link oficial: https://josprox.com/politicas debido a la creación de este código, el cuál es independiente de la materia, creado con la tecnología de Facitio FX con la licencia de 2015 - 2021, para más información de licencia visite: https://github.com/josprox
+>>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad
 
      Por la presente se otorga con cargo, a cualquier persona que obtenga una copia de este software y los archivos de documentación asociados (el "Software"), para operar con el Software con restricciones, incluidos, entre otros, los derechos de uso, copia, modificación, fusión , publicar, distribuir, sublicenciar y / o vender copias del Software, y permitir que las personas a las que se les proporcione el Software lo hagan, sujeto a las siguientes condiciones:
 
@@ -19,7 +23,11 @@ if (!isset($_SESSION['id_usuario'])) {
 }
 $iduser = $_SESSION['id_usuario'];
 
+<<<<<<< HEAD
 $sql = "SELECT usuarios.nombre, usuarios.img, usuarios.num_control, usuarios.discapacidad, gradgrup.grado,gradgrup.grupo, especialidades.especialidad, turnos.turno FROM usuarios
+=======
+$sql = "SELECT usuarios.nombre, usuarios.img, usuarios.num_control, gradgrup.grado,gradgrup.grupo, especialidades.especialidad, turnos.turno FROM usuarios
+>>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad
 INNER JOIN arg_alumno ON usuarios.id = arg_alumno.id_alm INNER JOIN gradgrup
 ON arg_alumno.id_gg = gradgrup.id INNER JOIN especialidades
 ON especialidades.id = arg_alumno.id_esp INNER JOIN turnos
@@ -28,6 +36,7 @@ ON arg_alumno.id_turn = turnos.id WHERE usuarios.id = '$iduser'";
 $resultado = $conexion->query($sql);
 $row = $resultado->fetch_assoc();
 
+<<<<<<< HEAD
 $sqlnumcontrols = "SELECT usuarios.id,usuarios.num_control, numcontrols.num, numcontrols.curp, arg_alumno.id_sexo FROM usuarios INNER JOIN numcontrols ON numcontrols.num = usuarios.num_control INNER JOIN arg_alumno ON arg_alumno.id_alm = usuarios.id WHERE usuarios.id = '$iduser'";
 $restsqlnumcontrols = $conexion->query($sqlnumcontrols);
 $control = $restsqlnumcontrols -> fetch_assoc();
@@ -39,6 +48,8 @@ $sql_arg_alumno = "SELECT sexo.sexo FROM sexo INNER JOIN arg_alumno ON sexo.id =
 $rest_arg_alumno = $conexion->query($sql_arg_alumno);
 $arg_alumno = $rest_arg_alumno -> fetch_assoc();
 
+=======
+>>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad
 if (isset($_POST["btn_enviar"])) {
 
     $imagen = $_FILES['imagen']['name'];
@@ -101,8 +112,13 @@ if (isset($_POST["btn_enviar"])) {
 <!DOCTYPE html>
 <html lang="es-MX">
     <head>
+<<<<<<< HEAD
         <?php include "ps-includes/metas.php"; include "ps-plugins/adsense/ads.php"; ?>
         <title>Cetis CWP | Perfil</title>
+=======
+        <?php include "ps-includes/metas.php"; ?>
+        <title>Cestis CP</title>
+>>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad
         <link rel="stylesheet" href="ps-contenido/css/paps.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     </head>
@@ -112,7 +128,11 @@ if (isset($_POST["btn_enviar"])) {
         <div class="contenedor">
             <main class="perfil">
                 <div class="prf-img">
+<<<<<<< HEAD
                     <img src="ps-contenido/img/alumnos/<?php echo $row['img'];?>" alt="" />
+=======
+                    <img src="ps-contenido/img/alumnos/<?php echo utf8_decode($row['img']);?>" alt="" />
+>>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad
                 </div>
 
                 <div class="prf-edt">
@@ -126,12 +146,16 @@ if (isset($_POST["btn_enviar"])) {
                                 <td  align="center">Seleccione una imagen con tamaño inferior a 2 MB</td>
                             </tr>
                             <tr>
+<<<<<<< HEAD
                                 <td colspan="2" align="left">
                                     <div id="div_file">
                                         <p id="txtimg" >Insertar imagen</p>
                                         <input type="file" name="imagen" id="imagen" />
                                     </div>
                                 </td>
+=======
+                                <td colspan="2" align="left"><input type="file" name="imagen" id="imagen" /></td>
+>>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad
                             </tr>
 
                             <tr>
@@ -145,6 +169,7 @@ if (isset($_POST["btn_enviar"])) {
 
                 <div class="prf-datos">
                 <h1>Datos en el sistema</h1>
+<<<<<<< HEAD
                         <p>Nombre registrado: <span><?php echo $row['nombre'];?></span></p>
                         <p>Tu número de control es: <span><?php echo $row['num_control'];?></span></p>
                         <p>Semestre: <span><?php echo $row['grado'];?></span> Grupo: <span><?php echo $row['grupo'];?></span> Especialidad: <span><?php echo $row['especialidad'];?></span></p>
@@ -152,13 +177,24 @@ if (isset($_POST["btn_enviar"])) {
                         <p>Discapacidad: <span><?php echo $row['discapacidad'];?></span></p>
                         <p>Curp: <span><?php echo $control['curp'];?></span></p>
                         <p>Género: <span><?php echo $arg_alumno['sexo'];?></span></p>
+=======
+                        <p>Nombre registrado: <span><?php echo utf8_decode($row['nombre']);?></span></p>
+                        <p>Tu número de control es: <span><?php echo utf8_decode($row['num_control']);?></span></p>
+                        <p>Semestre: <span><?php echo utf8_decode($row['grado']);?></span> Grupo: <span><?php echo utf8_decode($row['grupo']);?></span> Especialidad: <span><?php echo utf8_decode($row['especialidad']);?></span></p>
+                        <p>Turno: <span><?php echo utf8_decode($row['turno']);?></span></p>
+>>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad
                 </div>
             </main>
         </div>
 
         <script src="ps-contenido/js/slider.js"></script>
+<<<<<<< HEAD
 	<script src="./service.js"></script>
 
     </body>
 </html>
 <?php mysqli_close($conexion); ?>
+=======
+    </body>
+</html>
+>>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad

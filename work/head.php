@@ -215,6 +215,11 @@ div#div_file {
     cursor: pointer;
 }
   </style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./textarea/site.css">
+  <link rel="stylesheet" href="./textarea/richtext.min.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./textarea/jquery.richtext.js"></script>
 </head>
 
 <body class="g-sidenav-show  bg-gray-200">

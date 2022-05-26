@@ -53,30 +53,30 @@ $tuturno = $restfull['id_turn'];
         <div class="contenedor">
 
             <div class="grid-cont">
-                <section class="gd-sec">
+                <section class="gd-sec" id="contenido_post">
 
                 
                 <?php
 
-$id =$_GET["titulo"];
+                $id =$_GET["titulo"];
 
-$miconsulta = "SELECT maestros.nombre, maestros.img, publicaciones.titulo, publicaciones.descripcion FROM maestros
-INNER JOIN arg_public ON maestros.id = arg_public.id_mst INNER JOIN publicaciones
-ON arg_public.id_pbc = publicaciones.id WHERE titulo='$id' ";
+                $miconsulta = "SELECT maestros.nombre, maestros.img, publicaciones.titulo, publicaciones.descripcion FROM maestros
+                INNER JOIN arg_public ON maestros.id = arg_public.id_mst INNER JOIN publicaciones
+                ON arg_public.id_pbc = publicaciones.id WHERE titulo='$id' ";
 
-if($resultado=mysqli_query($conexion,$miconsulta)){
-    while($registro = mysqli_fetch_array($resultado)){
+                if($resultado=mysqli_query($conexion,$miconsulta)){
+                    while($registro = mysqli_fetch_array($resultado)){
 
-        echo "<h1 class= 'titulos'>" . $registro["titulo"] . "</h1>";
+                        echo "<h1 class= 'titulos'>" . $registro["titulo"] . "</h1>";
 
-        echo '<img class="img-public" src="ps-contenido/img/maestros/' . $registro['img'] . '" alt="">';
+                        echo '<img class="img-public" src="ps-contenido/img/maestros/' . $registro['img'] . '" alt="">';
 
-        echo "<p class='text-post'>" . $registro["descripcion"] . "</p>";
+                        echo'<div class="contenido_post">'. $registro["descripcion"] . '</div>';
 
-    }
-}
+                    }
+                }
 
-?>
+                ?>
 
                 </section>
 

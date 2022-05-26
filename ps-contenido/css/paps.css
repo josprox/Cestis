@@ -431,6 +431,12 @@ img.img-public {
   background: linear-gradient(180deg, #ec82e1 0%, #aa90fe 50%, #61cce2 100%);
 }
 
+.gd-sec .contenido_post div {
+  padding: 3px;
+  margin: 3px 8px;
+  color: #fff;
+}
+
 .gd-asd {
   -ms-grid-row: 2;
   -ms-grid-column: 1;

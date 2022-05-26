@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-05-2022 a las 02:05:47
+-- Tiempo de generación: 26-05-2022 a las 03:58:58
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -125,7 +125,9 @@ INSERT INTO `arg_public` (`id`, `id_mst`, `id_pbc`, `id_gradgrup`, `id_esp`, `id
 (22, 10, 34, 11, 1, 1, NULL, NULL),
 (23, 11, 35, 11, 1, 1, NULL, NULL),
 (25, 12, 37, 11, 1, 1, NULL, NULL),
-(26, 10, 40, 11, 1, 1, NULL, NULL);
+(26, 10, 40, 11, 1, 1, NULL, NULL),
+(30, 11, 44, 11, 1, 1, NULL, NULL),
+(31, 11, 45, 11, 1, 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -343,7 +345,10 @@ INSERT INTO `notifications` (`id`, `tipo`, `Contenido`, `created_at`, `updated_a
 (17, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 6.4', '2022-05-24 04:57:55', '2022-05-24 04:57:55'),
 (18, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.4 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.4\" class=\"text-white\">Clic aquí.</a>', '2022-05-24 04:58:41', '2022-05-24 04:58:41'),
 (19, 'Información', 'Ahora podrás instalar Cetis CWP con tan solo muy pocos pasos, descarga desde \"releases\" el archivo \"installer.rar\" de la versión que necesites.', '2022-05-24 05:00:37', '2022-05-24 05:00:37'),
-(20, 'Alerta primaria', 'Cetis CWP 6.4 es la versión más actualizada y estable. Un sistema de JOSPROX MX | Internacional', '2022-05-24 05:02:33', '2022-05-24 05:03:09');
+(20, 'Alerta primaria', 'Cetis CWP 6.4 es la versión más actualizada y estable. Un sistema de JOSPROX MX | Internacional', '2022-05-24 05:02:33', '2022-05-24 05:03:09'),
+(21, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 6.5', '2022-05-26 06:55:04', '2022-05-26 06:55:04'),
+(22, 'Peligro', 'Encontramos posibles vulnerabilidades de seguridad en dependencias antiguas, si has actualizado a Cetis CWP 6.5 no hay de que preocuparse.', '2022-05-26 06:56:21', '2022-05-26 06:56:21'),
+(23, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.5 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.5\" class=\"text-white\">Clic aquí.</a>', '2022-05-26 06:56:55', '2022-05-26 06:56:55');
 
 -- --------------------------------------------------------
 
@@ -464,7 +469,9 @@ INSERT INTO `publicaciones` (`id`, `iduser`, `titulo`, `vista`, `descripcion`, `
 (34, 10, 'REGISTRO DE EQUIPO', 'REGISTRAR EN UN DOCUMENTO DE WORD', 'REGISTRAR EN UN DOCUMENTO DE WORD LOS INTEGRANTES DE SU EQUIPO ,RECUERDEN QUE:\r\nAL MENOS UN INTEGRANTE DEBE CONTAR CON XAMPP\r\nDEBEN SER MAXIMO 6 POR EQUIPO', NULL, NULL),
 (35, 11, 'PROYECTO FINAL', 'Para el proyecto final se realizará en equipo una página web llamada INDEX.HTML', 'Para el proyecto final\r\nse realizará en equipo una página web llamada INDEX.HTML\r\nque contendrá una tabla, el tema a desarrollar será de libre elección ya sea de\r\ndeportes, autos, video juegos, modas, cosméticos, tenis etc.\r\nSigue las instrucciones que se indican el archivo de word adjunto y también en el video tutorial.', NULL, NULL),
 (37, 12, '19.- Mi escuela', 'Objetivo: El estudiante realizara una aplicación que integre varias ventanas y me muestre el plantel de mi escuela CETis No. 54, el tema es libre, puede ser las instalaciones, los profesores, los talleres, etc.', 'Objetivo: El estudiante realizara una aplicación que integre varias ventanas y me muestre el plantel de mi escuela CETis No. 54, el tema es libre, puede ser las instalaciones, los profesores, los talleres, etc.\r\n\r\n1.-  Agregamos los siguientes elementos para el diseño de nuestro proyecto y una función principal es que la aplicación lleve texto, imágenes, hable y se pueda desplazar por las siguientes ventas, así como regresar al inicio y salir. Deberá tener condiciones, solicitar información, y vario elementos que hemos realizado en los ejercicios anteriores.  Como mínimo deberá tener por las menos 10 ventanas, el estudiante es libre de colocar los elementos de acuerdo a sus diseño y función de su aplicación.', NULL, NULL),
-(40, 10, '16.- Salario Múltiple', 'Actividad: Realizar una aplicación, que por medio de teclado me permita introducir el nombre del trabajador, los días y horas trabajadas, las faltas por día y por hora', 'Objetivos:\r\n· Usar los componente del área de Disposición\r\n· Realizar el Diseño\r\n· Programar las solicitudes\r\n\r\n Actividad: Realizar una aplicación, que por medio de teclado me permita introducir el nombre del trabajador, los días y horas trabajadas, las faltas por día y por hora; Que me calcule por medio de botones al evento click por DIA, SEMANA, QUINCENA Y MES, arrojando resultados del Salario bruto, los descuentos de los días y/o horas no trabajadas, que descuente el ISR y me muestre el salario neto después de las deducciones realizadas.\r\n Se comparte el diseño de la aplicación.', NULL, NULL);
+(40, 10, '16.- Salario Múltiple', 'Actividad: Realizar una aplicación, que por medio de teclado me permita introducir el nombre del trabajador, los días y horas trabajadas, las faltas por día y por hora', 'Objetivos:\r\n· Usar los componente del área de Disposición\r\n· Realizar el Diseño\r\n· Programar las solicitudes\r\n\r\n Actividad: Realizar una aplicación, que por medio de teclado me permita introducir el nombre del trabajador, los días y horas trabajadas, las faltas por día y por hora; Que me calcule por medio de botones al evento click por DIA, SEMANA, QUINCENA Y MES, arrojando resultados del Salario bruto, los descuentos de los días y/o horas no trabajadas, que descuente el ISR y me muestre el salario neto después de las deducciones realizadas.\r\n Se comparte el diseño de la aplicación.', NULL, NULL),
+(44, 11, '22.- Mis notas', 'Objetivo: El estudiante elaborará una aplicación móvil utilizando una base datos para anotar información, almacenar y eliminarla de la Base de Datos. TinyBD', '<div>Nombre del proyecto MisNotas&nbsp;</div><div><br></div><div>Objetivo: El estudiante elaborará una aplicación móvil utilizando una base datos para anotar información, almacenar</div><div>y eliminarla de la Base de Datos. TinyBD</div><div><br></div><div>Que es Tinydb?</div><div>Es un componente que también nos permite guardar datos, pero este lo hace</div><div>localmente, es decir, en la memoria local o cache del teléfono.</div><div>Es muy útil para guardar datos que no necesitamos que sean accedidos por</div><div>otros dispositivos, en pocas palabras, para una aplicación que no se conecte a</div><div>internet.</div><div><span style=\"font-size: var(--bs-body-font-size); text-align: var(--bs-body-text-align);\"><br></span></div><div><span style=\"font-size: var(--bs-body-font-size); text-align: var(--bs-body-text-align);\">Recursos:</span></div><div><ol><li>General los botones con diseño https://www.clickminded.com/button-generator/</li><li>Ejercicio práctico https://www.youtube.com/watch?v=iikDKBFMiQI</li></ol></div>', NULL, NULL),
+(45, 11, '23.- Restaurante', 'Objetivo: El estudiante elaborará una solución móvil de acuerdo con los procedimientos avalados para su construcción y puesta en marcha de un Restaurante.', '<div><div style=\"text-align: justify;\"><span style=\"text-align: var(--bs-body-text-align); color: rgb(60, 64, 67); font-family: Roboto, Arial, sans-serif; font-size: 14px; letter-spacing: 0.2px;\">Nombre del proyecto&nbsp;</span><b style=\"text-align: var(--bs-body-text-align); color: rgb(60, 64, 67); font-family: Roboto, Arial, sans-serif; font-size: 14px; letter-spacing: 0.2px;\">Restaurante</b><span style=\"text-align: var(--bs-body-text-align); color: rgb(60, 64, 67); font-family: Roboto, Arial, sans-serif; font-size: 14px; letter-spacing: 0.2px;\">&nbsp;</span></div><div style=\"text-align: justify;\"><font color=\"#3c4043\" face=\"Roboto, Arial, sans-serif\"><span style=\"font-size: 14px; letter-spacing: 0.2px;\"><br></span></font></div><b style=\"color: rgb(60, 64, 67); font-family: Roboto, Arial, sans-serif; font-size: 14px; letter-spacing: 0.2px;\"><div style=\"text-align: justify;\"><b style=\"text-align: var(--bs-body-text-align); letter-spacing: 0.2px;\">Objetivo</b><span style=\"font-weight: 400; text-align: var(--bs-body-text-align); letter-spacing: 0.2px;\">: El estudiante elaborará una solución móvil de acuerdo con los&nbsp;procedimientos avalados para su construcción y puesta en marcha de un&nbsp;Restaurante.</span></div></b><div style=\"text-align: justify;\"><font color=\"#3c4043\" face=\"Roboto, Arial, sans-serif\"><span style=\"font-size: 14px; letter-spacing: 0.2px;\"><br></span></font></div><span style=\"color: rgb(60, 64, 67); font-family: Roboto, Arial, sans-serif; font-size: 14px; letter-spacing: 0.2px;\"><div style=\"text-align: justify;\"><span style=\"letter-spacing: 0.2px; text-align: var(--bs-body-text-align);\">Durante el desarrollo de&nbsp;la presente actividad de aprendizaje, el estudiante formulará soluciones&nbsp;móviles teniendo en cuenta los procedimientos establecidos para la construcción&nbsp;de aplicaciones. Se adquirirán los conocimientos necesarios para reconocer la&nbsp;sección de diseñador con los controles disponibles y la sección de bloques&nbsp;integrados que permiten la programación de la aplicación móvil, por medio de los&nbsp;eventos que van entrelazados en forma de puzzle.</span></div></span></div>', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -717,7 +724,7 @@ ALTER TABLE `arg_maestro`
 -- AUTO_INCREMENT de la tabla `arg_public`
 --
 ALTER TABLE `arg_public`
-  MODIFY `id` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT de la tabla `classmodels`
@@ -765,7 +772,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de la tabla `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT de la tabla `numcontrols`
@@ -783,7 +790,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT de la tabla `publicaciones`
 --
 ALTER TABLE `publicaciones`
-  MODIFY `id` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT de la tabla `sexo`

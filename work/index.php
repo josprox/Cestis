@@ -213,11 +213,11 @@
               <form action="<?php $_SERVER["PHP_SELF"]; ?>" method="post">
                 <div class="mb-3">
                   <label for="titulo" class="form-label">Título</label>
-                  <input name="titulo" type="text" class="form-control" id="titulo" placeholder="Pon el título">
+                  <input name="titulo" type="text" class="form-control" id="titulo" placeholder="Pon el título" required>
                 </div>
                 
                 <div class="mb-3">
-                  <select name="gradgrup" class="form-select" aria-label="Default select example">
+                  <select name="gradgrup" class="form-select" aria-label="Default select example" required>
                     <option selected>¿Para quién es la publicación?</option>
                     <?php
                     $public = "SELECT gradgrup.id,gradgrup.grado, gradgrup.grupo FROM gradgrup INNER JOIN arg_maestro ON arg_maestro.id_gg = gradgrup.id WHERE arg_maestro.id_mst = '$iduser' GROUP BY gradgrup.grupo";
@@ -233,7 +233,7 @@
                 </div>
                 
                 <div class="mb-3">
-                  <select name="esp" class="form-select" aria-label="Default select example">
+                  <select name="esp" class="form-select" aria-label="Default select example" required>
                     <option selected>¿Para qué especialidad?</option>
                     <?php
                     $public = "SELECT especialidades.id, especialidades.especialidad FROM especialidades INNER JOIN arg_maestro ON arg_maestro.id_esp = especialidades.id WHERE arg_maestro.id_mst = '$iduser' GROUP BY especialidades.especialidad";
@@ -249,7 +249,7 @@
                 </div>
                 
                 <div class="mb-3">
-                  <select name="turn" class="form-select" aria-label="Default select example">
+                  <select name="turn" class="form-select" aria-label="Default select example" required>
                     <option selected>¿Para qué turno?</option>
                     <?php
                     $public = "SELECT turnos.id, turnos.turno FROM turnos INNER JOIN arg_maestro ON arg_maestro.id_turno = turnos.id WHERE arg_maestro.id_mst = '$iduser' GROUP BY turnos.turno";
@@ -266,11 +266,11 @@
 
                 <div class="mb-3">
                   <label for="vista" class="form-label">Vista previa</label>
-                  <input name="vista" type="text" class="form-control" id="vista" placeholder="Pon una pequeña entrada del contenido">
+                  <input name="vista" type="text" class="form-control" id="vista" placeholder="Pon una pequeña entrada del contenido" required>
                 </div>
                 <div class="mb-3">
                   <label for="contenido" class="form-label">Texto a agregar</label>
-                  <textarea name="contenido" class="form-control" id="contenido" rows="3"></textarea>
+                  <textarea name="contenido" class="form-control textarea" id="contenido" rows="3" required></textarea>
                 </div>
                 <input name="publicar" type="submit" class="btn" value="Publicar">
               </form>

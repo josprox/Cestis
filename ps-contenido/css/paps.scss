@@ -363,6 +363,14 @@ nav {
     border-radius: 12px;
     background: rgb(236,130,225);
     background: linear-gradient(180deg, rgba(236,130,225,1) 0%, rgba(170,144,254,1) 50%, rgba(97,204,226,1) 100%);
+
+    .contenido_post{
+      div{
+        padding: 3px;
+        margin: 3px 8px;
+        color: $blanco;
+      }
+    }
 }
 
 .gd-asd {

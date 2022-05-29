@@ -1,13 +1,8 @@
-<<<<<<< HEAD
 <link rel="shortcut icon" href="ps-contenido/app img/default.png" type="image/x-icon">
-=======
-<link rel="shortcut icon" href="ps-contenido/img/favicon.png" type="image/x-icon">
->>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad
 <meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1' >
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<<<<<<< HEAD
 <meta name="description" content="Se bienvenido al panel de Alumnos, generado para que los alumnos puedan convivir con sus maestros de una manera muy segura.">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 <script src="https://kit.fontawesome.com/4a5e39d1d1.js" crossorigin="anonymous"></script>
@@ -31,6 +26,3 @@
 header("Content-Type: text/html;charset=utf-8");
 
 ?>
-=======
-<meta name="description" content="Se bienvenido al panel de Alumnos, generado para que los alumnos puedan convivir con sus maestros de una manera muy segura.">
->>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad

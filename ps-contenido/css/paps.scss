@@ -1,14 +1,10 @@
 @charset "UTF-8";
 @import "color";
 @import "mapa";
-<<<<<<< HEAD
 /* El siguiente código NO PUEDE SER UTILIZADO, MODIFICADO NI COPIADO, el código tiene licencia de JOSPROX MX
 basado en Facilito(FX) lo cuál el uso de este sin una autorización por medio de JOSPEOX será un código ilegal
 y con posibilidad de dar de baja el sitio web que maneje este código. Para sacar una autorización contactar
 por el siguiente medio: sitio web https://josprox.com/contacto */
-=======
-
->>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad
 body {
   margin: 0;
   background: rgb(63,251,249);
@@ -48,14 +44,6 @@ a {
   list-style: none;
 }
 
-<<<<<<< HEAD
-=======
-/* El siguiente código NO PUEDE SER UTILIZADO, MODIFICADO NI COPIADO, el código tiene licencia de JOSPROX MX
-basado en Facilito(FX) lo cuál el uso de este sin una autorización por medio de JOSPEOX será un código ilegal
-y con posibilidad de dar de baja el sitio web que maneje este código. Para sacar una autorización contactar
-por el siguiente medio: sitio web https://josprox.com/contacto */
-
->>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad
 .grid-home {
   display: grid;
   grid-template: {
@@ -104,15 +92,12 @@ nav {
 .logo {
   height: 60px;
   object-fit: cover;
-<<<<<<< HEAD
   margin-left: 12px;
   img{
     border-radius: 12px;
     width: 100px;
     height: 50px;
   }
-=======
->>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad
 }
 
 @media screen and (min-width: 858px) {
@@ -170,24 +155,10 @@ nav {
   }
 }
 
-<<<<<<< HEAD
 @media screen and (max-width: 885px) {
   .logo img {
     width: 120px;
     margin-left: 0;
-=======
-.logo {
-  margin-top: -18px;
-
-  img {
-    width: 200px;
-  }
-}
-
-@media screen and (max-width: 885px) {
-  .logo img {
-    width: 150px;
->>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad
   }
 }
 
@@ -304,7 +275,6 @@ nav {
       }
     }
   }
-<<<<<<< HEAD
   h1.titulos{
     font-size: 1.2em;
     padding: 12px;
@@ -333,9 +303,6 @@ nav {
       width: 210px;
     }
   }
-=======
-  
->>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad
   .barras {
     position: absolute;
     bottom: 0;
@@ -396,7 +363,6 @@ nav {
     border-radius: 12px;
     background: rgb(236,130,225);
     background: linear-gradient(180deg, rgba(236,130,225,1) 0%, rgba(170,144,254,1) 50%, rgba(97,204,226,1) 100%);
-<<<<<<< HEAD
 
     .contenido_post{
       div{
@@ -405,8 +371,6 @@ nav {
         color: $blanco;
       }
     }
-=======
->>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad
 }
 
 .gd-asd {
@@ -530,10 +494,7 @@ nav {
         rows: minmax(50px, auto);
     }
     .btn1{
-<<<<<<< HEAD
       cursor: pointer;
-=======
->>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad
         border-radius: 12px;
         margin: 12px 8px;
         background: $bg-morado;
@@ -565,7 +526,6 @@ nav {
     }
 }
 
-<<<<<<< HEAD
 .pdf{
   border-radius: 12px; 
   display: block; 
@@ -575,8 +535,6 @@ nav {
   
 }
 
-=======
->>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad
 table, th, td{
     background: $color-esqueleto;
     border-radius: 12px;
@@ -697,7 +655,6 @@ table, th, td{
   width: 98%;
   margin: auto;
 }
-<<<<<<< HEAD
 p#txtimg{
   text-align: center;
   color: #fff;
@@ -735,14 +692,11 @@ input#btn_enviar {
   cursor: pointer;
 }
 
-=======
->>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad
 
 @media screen and (min-width: map-get($bp,c)) {
   .contenedor {
     width: 96%;
   }
-<<<<<<< HEAD
   .pdf{
     border-radius: 12px; 
     display: block; 
@@ -751,8 +705,6 @@ input#btn_enviar {
     height:350px;
     
   }
-=======
->>>>>>> a6ed646b922cf7133a7deac9e698ff4e20674bad
 }
 
 @media screen and (min-width: map-get($bp,m)) {

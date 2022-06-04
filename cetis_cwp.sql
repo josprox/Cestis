@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-05-2022 a las 03:39:27
+-- Tiempo de generación: 04-06-2022 a las 02:04:00
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -348,7 +348,9 @@ INSERT INTO `notifications` (`id`, `tipo`, `Contenido`, `created_at`, `updated_a
 (20, 'Alerta primaria', 'Cetis CWP 6.4 es la versión más actualizada y estable. Un sistema de JOSPROX MX | Internacional', '2022-05-24 05:02:33', '2022-05-24 05:03:09'),
 (21, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 6.5', '2022-05-26 06:55:04', '2022-05-26 06:55:04'),
 (22, 'Peligro', 'Encontramos posibles vulnerabilidades de seguridad en dependencias antiguas, si has actualizado a Cetis CWP 6.5 no hay de que preocuparse.', '2022-05-26 06:56:21', '2022-05-26 06:56:21'),
-(23, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.5 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.5\" class=\"text-white\">Clic aquí.</a>', '2022-05-26 06:56:55', '2022-05-26 06:56:55');
+(23, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.5 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.5\" class=\"text-white\">Clic aquí.</a>', '2022-05-26 06:56:55', '2022-05-26 06:56:55'),
+(24, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 6.6', '2022-06-04 04:50:45', '2022-06-04 04:50:45'),
+(25, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.6 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.6\" class=\"text-white\">Clic aquí.</a>', '2022-06-04 04:51:06', '2022-06-04 04:51:06');
 
 -- --------------------------------------------------------
 
@@ -498,6 +500,29 @@ INSERT INTO `sexo` (`id`, `sexo`, `created_at`, `updated_at`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `social`
+--
+
+CREATE TABLE `social` (
+  `id` bigint(11) NOT NULL,
+  `id_usuario` bigint(11) NOT NULL,
+  `info_datos` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `social`
+--
+
+INSERT INTO `social` (`id`, `id_usuario`, `info_datos`, `created_at`, `updated_at`) VALUES
+(1, 31, '<div><div>Hola mucho gusto, te voy a contar un poco de mi, me gusta jugar videojuegos, salir con amigos, escuchar música y muchas cosas más.</div><div>Te invito a que me conozcas agregándome.</div></div>', NULL, NULL),
+(2, 33, 'Soy una persona sociable, me gusta escuchar música y trabajar.', NULL, NULL),
+(3, 38, '<div>Me gusta todo tipo de música, hacer actividades al aire libre, salir con mis amigos, me gusta todo lo que tenga que ver con la naturaleza, me gustan mucho los animales, soy muy sociable y me gusta salir de mi zona de confort.</div>', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `turnos`
 --
 
@@ -538,7 +563,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'José Luis Melchor Estrada', 'joss@int.josprox.com', NULL, '$2y$10$1L1ZmE6gTQ1NYlCwb4GQBesiM0g1Quyzg3lOSMmdEdxCfcAJFVUyW', 'NpYbJnGnoQXPawzJeTrw9NNLtBq80rz7OmaaKlJLFN8TEoGwF6x5EW4lJoEe', '2022-04-15 05:12:26', '2022-04-15 05:12:26');
+(1, 'José Luis Melchor Estrada', 'joss@int.josprox.com', NULL, '$2y$10$1L1ZmE6gTQ1NYlCwb4GQBesiM0g1Quyzg3lOSMmdEdxCfcAJFVUyW', 'uNiCt2Q7ygRRRcX7tCN7cudyNYVAmSW8kxGW3M5oXG5Vk3vMQJuIhAiTq1za', '2022-04-15 05:12:26', '2022-04-15 05:12:26');
 
 -- --------------------------------------------------------
 
@@ -680,6 +705,12 @@ ALTER TABLE `sexo`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `social`
+--
+ALTER TABLE `social`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `turnos`
 --
 ALTER TABLE `turnos`
@@ -772,7 +803,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de la tabla `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de la tabla `numcontrols`
@@ -797,6 +828,12 @@ ALTER TABLE `publicaciones`
 --
 ALTER TABLE `sexo`
   MODIFY `id` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT de la tabla `social`
+--
+ALTER TABLE `social`
+  MODIFY `id` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `turnos`

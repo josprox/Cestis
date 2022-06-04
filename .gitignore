@@ -44,3 +44,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,linux
+
+# smtp-start
+
+/social/home/smtp/correo.php

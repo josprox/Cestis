@@ -32,6 +32,18 @@ Este sistema está programado en PHP.
     Alumnos ("./"):
         usuario: josprox
         Contraseña: Andyyyo12?
+
+        usuario: Alextremo
+        Contraseña: Andyyyo12?
+
+        usuario: xime04
+        Contraseña: Andyyyo12?
+
+        Usuario: Isra Lara
+        Contraseña: Andyyyo12?
+
+        Usuario: eriicksanchez_
+        Contraseña: Andyyyo12?
     
     Maestros ("./maestros/"):
         usuario: emma
@@ -45,9 +57,9 @@ Este sistema está programado en PHP.
 
 ### Para poder usar Cetis CWP necesitará algunos requisitos mínimos:
 
-- Versión mínima requerida de PHP: 8.0.1
+- Versión mínima requerida de PHP: 8.1.0
 
-- Espacio requerido en disco: 188 mb. 
+- Espacio requerido en disco: 250 mb.
 
 - Transferencia de red requerida del servidor: 5 mb.
 
@@ -110,9 +122,11 @@ Listo, desde ahora podrás correr de una manera segura Cetis CWP.
 
 - Se recomienda usar un panel de control para administrar el servidor, puede usar sin problemas Cpanel y Hestia Control Panel. De preferencia debería usar <a href="https://hestiacp.com/">Hestia Control Panel</a>.
 
-- En caso de pruebas y mejoras, se recomienda usar XAMPP con php 9.1.2 o superior, debiado a que, fué programado con esa versión.
+- En caso de pruebas y mejoras, se recomienda usar XAMPP con php 8.1.0 o superior, debiado a que, fué programado con esa versión.
 
 - Se le recomienda separar la carpeta "./admin/" con un subdominio, de esta manera podrá ejecutarse de una forma correcta y será más dificil que sufra un ataque al servidor.
+
+- Para tener un buen funcionamiento, se recomienda que una vez subidos los archivos, ponle los todos los permisos de leer, escribir y ejecutar (permiso 777).
 
 #### Licencia.
 

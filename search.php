@@ -44,7 +44,7 @@ $row = $resultado->fetch_assoc();
     <div class="search">
         <img src="./ps-contenido/app img/cover.png" alt="">
         <form class="formulario" action="./resultados" method="get">
-            <p>Versión 6.4 actualizado el día: 17/05/22</p>
+            <p>Versión 6.4 actualizado el día: 03/06/22</p>
             <label for="">¿Qué deseas buscar?</label>
             <input type="text" name="busqueda" id="busqueda" type="search" placeholder="Buscar...">
         </form>
@@ -60,6 +60,7 @@ $row = $resultado->fetch_assoc();
             <a href="./more"><li><i class="fa-solid fa-signs-post"></i></li></a>
             <a href="./search" class="active"><li><i class="fa-solid fa-magnifying-glass"></i></li></a>
             <a href="./perfil"><li><img src="ps-contenido/img/alumnos/<?php echo $row['img'];?>" alt="" /></li></a>
+            <a href="./social/"><li><i class="fa-solid fa-users"></i></li></a>
             <a href="./ps-conexion/salir"><li><i class="fa-solid fa-arrow-right-from-bracket"></i></li></a>
         </ul>
     </nav>

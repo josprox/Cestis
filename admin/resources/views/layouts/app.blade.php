@@ -81,14 +81,17 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a href="{{ url('/argpublics') }}" class="dropdown-item"><i class="fab fa-laravel text-info"></i> Publicaciones(V2)</a> 
-                                    <a href="{{ url('/argpublics') }}" class="dropdown-item"><i class="fab fa-laravel text-info"></i> Publicaciones(V1)</a> 
+                                    <a href="{{ url('/argpublics') }}" class="dropdown-item"><i class="fab fa-laravel text-info"></i> Publicaciones(V2)</a>
+                                    <a href="{{ url('/socials') }}" class="dropdown-item"><i class="fab fa-laravel text-info"></i> Social</a>
                                     <a href="{{ url('/argalumnos') }}" class="dropdown-item"><i class="fab fa-laravel text-info"></i> Alumnos panel</a>
                                     <a href="{{ url('/argmaestros') }}" class="dropdown-item"><i class="fab fa-laravel text-info"></i> Maestros Panel</a> 
                                 </div>
                             </li>
 						<!--Nav Bar Hooks - Do not delete!!-->
 						<!--<li class="nav-item">
+                            <a href="{{ url('/socials') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Socials</a> 
+                        </li>
+						<li class="nav-item">
                             <a href="{{ url('/argpublics') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Argpublics</a> 
                         </li>
 						<li class="nav-item">

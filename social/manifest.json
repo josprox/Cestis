@@ -1,0 +1,59 @@
+{
+    "name": "Cristal CWP",
+    "short_name": "Cristal",
+    "description": "Se bienvenido a Cristal, donde podrás conocer personas de tu mismo instituto, que esperas solo necesitas registrarte en Cetis CWP.",
+    "background_color": "#fff",
+    "theme_color": "#c953c0",
+    "orientation": "portrait",
+    "display": "standalone",
+    "start_url": "./?utm_source=web_app_manifest",
+    "scope": "./",
+    "lang": "es-MX",
+    "icons": [
+      {
+        "src": "./images/logo_app/logo 1024.png",
+        "sizes": "1024x1024",
+        "type": "image/png"
+      },
+      {
+        "src": "./images/logo_app/logo 512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "./images/logo_app/logo 384.png",
+        "sizes": "384x384",
+        "type": "image/png"
+      },
+      {
+        "src": "./images/logo_app/logo 256.png",
+        "sizes": "256x256",
+        "type": "image/png"
+      },
+      {
+        "src": "./images/logo_app/logo 192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "./images/logo_app/logo 128.png",
+        "sizes": "128x128",
+        "type": "image/png"
+      },
+      {
+        "src": "./images/logo_app/logo 96.png",
+        "sizes": "96x96",
+        "type": "image/png"
+      },
+      {
+        "src": "./images/logo_app/logo 64.png",
+        "sizes": "64x64",
+        "type": "image/png"
+      },
+      {
+        "src": "./images/logo_app/logo 32.png",
+        "sizes": "32x32",
+        "type": "image/png"
+      }
+    ]
+  }

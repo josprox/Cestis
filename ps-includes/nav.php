@@ -15,6 +15,7 @@
                             <li><a href="perfil"><i class="fa-solid fa-user"></i> Perfil</a></li>
                             <li><a href="more"><i class="fa-solid fa-signs-post"></i> Publicaciones</a></li>
                             <li><a href="search"><i class="fa-solid fa-magnifying-glass"></i> Buscar</a></li>
+                            <li><a href="./social/"><i class="fa-solid fa-users"></i> Cristal</a></li>
                             <li><a href="ps-conexion/salir"><i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar sesión</a></li>
                         </ul>
                     </div>

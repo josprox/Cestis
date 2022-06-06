@@ -57,6 +57,8 @@ if (isset($_POST["ingresar"])) {
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 </head>
 <body>
+	<a href="./social/" class="btn_social"><i class="fa-solid fa-users"></i></a>
+    <a href="https://github.com/josprox/Cetis-CWP" class="btn_github"><i class="fa-brands fa-github"></i></a>
 	<img class="wave" src="ps-contenido/img/wave.png">
 	<div class="container">
 		<div class="img">

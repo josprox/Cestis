@@ -1,3 +1,5 @@
+    <a href="./social/home/" class="btn_social"><i class="fa-solid fa-users"></i></a>
+    <a href="https://github.com/josprox/Cetis-CWP" class="btn_github"><i class="fa-brands fa-github"></i></a>
 <div class="grid-home">
             <div class="header-flex">
                 <nav class="nav-flex">

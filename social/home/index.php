@@ -42,14 +42,10 @@ $post_lect = $datos_rest->fetch_assoc();
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Cristal | Inicio</title>
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="scss/cristal.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="../images/logo.png"/>
+    <?php include "includes/head.php"; ?>
+
 </head>
 <body>
     <?php include "includes/navbar.php" ?>

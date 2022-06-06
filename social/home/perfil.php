@@ -96,20 +96,15 @@ if (isset($_POST["btn_enviar"])) {
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cristal | Perfil</title>
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="scss/cristal.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Cristal | Perfil</title>
+
+    <?php include "includes/head.php"; ?>
+
     <link rel="stylesheet" href="./textarea/site.css">
     <link rel="stylesheet" href="./textarea/richtext.min.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="./textarea/jquery.richtext.js"></script>
-    <link rel="icon" type="image/png" href="../images/logo.png"/>
 </head>
 <body>
 

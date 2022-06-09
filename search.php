@@ -35,7 +35,7 @@ $row = $resultado->fetch_assoc();
 <head>
     <?php include "ps-includes/metas.php"; ?>
     <title>Cetis CWP | Busqueda</title>
-    <link rel="stylesheet" href="./ps-contenido/scss/search.min.css">
+    <link rel="stylesheet" href="./ps-contenido/scss/search.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script src="https://kit.fontawesome.com/4a5e39d1d1.js" crossorigin="anonymous"></script>
 </head>
@@ -55,13 +55,19 @@ $row = $resultado->fetch_assoc();
     </div>
     
     <nav class="content_end">
-        <ul class="barra">
-            <a href="./panel"><li><i class="fa-solid fa-house"></i></li></a>
-            <a href="./more"><li><i class="fa-solid fa-signs-post"></i></li></a>
-            <a href="./search" class="active"><li><i class="fa-solid fa-magnifying-glass"></i></li></a>
-            <a href="./perfil"><li><img src="ps-contenido/img/alumnos/<?php echo $row['img'];?>" alt="" /></li></a>
-            <a href="./social/"><li><i class="fa-solid fa-users"></i></li></a>
-            <a href="./ps-conexion/salir"><li><i class="fa-solid fa-arrow-right-from-bracket"></i></li></a>
+        <ul class="barra_grid">
+            <div class="barra">
+                <a href="./panel"><li><i class="fa-solid fa-house"></i></li></a>
+                <a href="./more"><li><i class="fa-solid fa-signs-post"></i></li></a>
+                <a href="./search" class="active"><li><i class="fa-solid fa-magnifying-glass"></i></li></a>
+
+            </div>
+            <div class="barra">
+
+                <a href="./perfil"><li><img src="ps-contenido/img/alumnos/<?php echo $row['img'];?>" alt="" /></li></a>
+                <a href="./social/"><li><i class="fa-solid fa-users"></i></li></a>
+                <a href="./ps-conexion/salir"><li><i class="fa-solid fa-arrow-right-from-bracket"></i></li></a>
+            </div>
         </ul>
     </nav>
 

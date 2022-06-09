@@ -62,7 +62,7 @@ if (isset($_POST["registrar"])) {
   $esp1 = (int)$esp;
   $turno = mysqli_real_escape_string($conexion,$_POST['turno']);
   $turno1 = (int)$turno;
-  $genero = mysqli_real_escape_string($conexion,$_POST['esp']);
+  $genero = mysqli_real_escape_string($conexion,$_POST['genero']);
   $genero1 = (int)$genero;
 
   $sqldat = "SELECT id FROM usuarios 

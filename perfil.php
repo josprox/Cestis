@@ -92,7 +92,7 @@ if (isset($_POST["btn_enviar"])) {
 
     echo "<script>
 			alert('La imagen fue actualizada correctamente');
-			window.location= './';
+			window.location= './panel';
 		</script>";
 }
 

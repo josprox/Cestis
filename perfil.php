@@ -64,7 +64,7 @@ if (isset($_POST["btn_enviar"])) {
     }else{
         echo "<script>
 			alert('Entrada correcta');
-			window.location= './';
+			window.location= './perfil';
 		</script>";
         if ((isset($_FILES['imagen']['name'])&&($_FILES['imagen']['error']==UPLOAD_ERR_OK))){
 
@@ -74,7 +74,7 @@ if (isset($_POST["btn_enviar"])) {
 
             echo "<script>
 			alert('El archivo " . $_FILES['imagen']['name'] . " se ha copiado en el directorio de imagenes');
-			window.location= './';
+			window.location= './perfil';
 		</script>";
         }else{
             echo "El archivo no se ha podido copiar a imagenes";
@@ -92,7 +92,7 @@ if (isset($_POST["btn_enviar"])) {
 
     echo "<script>
 			alert('La imagen fue actualizada correctamente');
-			window.location= './panel';
+			window.location= './perfil';
 		</script>";
 }
 

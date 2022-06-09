@@ -73,7 +73,7 @@ Si trabajas en un servidor:
 
 - Descomprime el archivo zip, se descomprimirá la carpeta /installer/, accede a ella y copia o corta los dos archivos a tu raiz. Una vez hecho esto podrás eliminar la carpeta /installer/ y el zip installer.zip, dejando solo el zip de la versión descargada y el archivo installer.php.
 
-- Crea una base de datos.
+- Crea una base de datos, de preferencia usa un cortejo utf8mb4_unicode_ci.
 
 - accede a tu dominio y al archivo correspondiente "installer.php", ejemplo: ("https://tudominio.com/installer.php")
 
@@ -89,7 +89,7 @@ Si trabajas en un localhost (usando de ejemplo xampp):
 
 - Descomprime el archivo zip dentro de la carpeta antes creada, se descomprimirá la carpeta /installer/, accede a ella y copia o corta los dos archivos a tu raiz. Una vez hecho esto podrás eliminar la carpeta /installer/ y el zip installer.zip, dejando solo el zip de la versión descargada y el archivo installer.php.
 
-- Crea una base de datos.
+- Crea una base de datos, de preferencia usa un cortejo utf8mb4_unicode_ci.
 
 - Ve al directorio antes creado con dirección a "installer.php", ejemplo: ("https://localhost/cetis-cwp/installer.php")
 

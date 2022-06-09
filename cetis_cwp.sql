@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-06-2022 a las 02:38:12
+-- Tiempo de generación: 09-06-2022 a las 23:26:59
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -279,8 +279,8 @@ CREATE TABLE `maestros` (
 --
 
 INSERT INTO `maestros` (`id`, `usuario`, `password`, `correo`, `img`, `nombre`, `discapacidad`, `created_at`, `updated_at`) VALUES
-(10, 'emma', '$2y$10$NHxPsDstdm5cwBd.G2eXvOoJ4BuR8fM9/4xJ7ELM/iPXI7g3pWoOy', 'emma@josprox.com', 'IMG_20220211_104222.webp', 'Emma N', 'Ninguna', NULL, '2022-04-24 05:55:04'),
-(11, 'puff', '$2y$10$LIBjiQeTPbjCJ8BuNftcmOQi61e5tWZQ3Rg5BGQ2Jc76K03opT2hO', 'kenia@josprox.com', 'IMG_20220211_120541.webp', 'Kenia N', 'Ninguna', NULL, '2022-04-24 05:55:13'),
+(10, 'emma', '$2y$10$NHxPsDstdm5cwBd.G2eXvOoJ4BuR8fM9/4xJ7ELM/iPXI7g3pWoOy', 'emma@josprox.com', 'emma.webp', 'Emma N', 'Ninguna', NULL, '2022-04-24 05:55:04'),
+(11, 'puff', '$2y$10$LIBjiQeTPbjCJ8BuNftcmOQi61e5tWZQ3Rg5BGQ2Jc76K03opT2hO', 'kenia@josprox.com', 'puff.webp', 'Kenia N', 'Ninguna', NULL, '2022-04-24 05:55:13'),
 (12, 'norma', '$2y$10$tslHOTK1iLU3OV7UUjyJouG51w0FceopJ8MfY3L95AU0yLneOqN.q', 'norma@josprox.com', 'Norma.webp', 'Norma Carreón', 'Ninguna', NULL, '2022-04-24 05:55:22');
 
 -- --------------------------------------------------------
@@ -350,7 +350,10 @@ INSERT INTO `notifications` (`id`, `tipo`, `Contenido`, `created_at`, `updated_a
 (22, 'Peligro', 'Encontramos posibles vulnerabilidades de seguridad en dependencias antiguas, si has actualizado a Cetis CWP 6.5 no hay de que preocuparse.', '2022-05-26 06:56:21', '2022-05-26 06:56:21'),
 (23, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.5 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.5\" class=\"text-white\">Clic aquí.</a>', '2022-05-26 06:56:55', '2022-05-26 06:56:55'),
 (24, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 6.6', '2022-06-04 04:50:45', '2022-06-04 04:50:45'),
-(25, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.6 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.6\" class=\"text-white\">Clic aquí.</a>', '2022-06-04 04:51:06', '2022-06-04 04:51:06');
+(25, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.6 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.6\" class=\"text-white\">Clic aquí.</a>', '2022-06-04 04:51:06', '2022-06-04 04:51:06'),
+(26, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 6.7', '2022-06-10 02:24:12', '2022-06-10 02:24:12'),
+(27, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.7 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.7\" class=\"text-white\">Clic aquí.</a>', '2022-06-10 02:24:35', '2022-06-10 02:24:35'),
+(28, 'Alerta primaria', 'Te encuentras en la versión más estable de Cetis CWP', '2022-06-10 02:25:38', '2022-06-10 02:25:38');
 
 -- --------------------------------------------------------
 
@@ -803,7 +806,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de la tabla `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT de la tabla `numcontrols`

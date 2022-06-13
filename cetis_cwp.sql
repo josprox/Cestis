@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-06-2022 a las 23:26:59
+-- Tiempo de generación: 13-06-2022 a las 03:24:43
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -353,7 +353,9 @@ INSERT INTO `notifications` (`id`, `tipo`, `Contenido`, `created_at`, `updated_a
 (25, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.6 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.6\" class=\"text-white\">Clic aquí.</a>', '2022-06-04 04:51:06', '2022-06-04 04:51:06'),
 (26, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 6.7', '2022-06-10 02:24:12', '2022-06-10 02:24:12'),
 (27, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.7 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.7\" class=\"text-white\">Clic aquí.</a>', '2022-06-10 02:24:35', '2022-06-10 02:24:35'),
-(28, 'Alerta primaria', 'Te encuentras en la versión más estable de Cetis CWP', '2022-06-10 02:25:38', '2022-06-10 02:25:38');
+(28, 'Alerta primaria', 'Te encuentras en la versión más estable de Cetis CWP', '2022-06-10 02:25:38', '2022-06-10 02:25:38'),
+(29, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 6.8', '2022-06-13 06:23:34', '2022-06-13 06:23:34'),
+(30, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.8 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.8\" class=\"text-white\">Clic aquí.</a>', '2022-06-13 06:23:49', '2022-06-13 06:23:49');
 
 -- --------------------------------------------------------
 
@@ -806,7 +808,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de la tabla `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT de la tabla `numcontrols`

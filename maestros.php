@@ -86,7 +86,7 @@ if (isset($_POST["ingresar"])) {
            		    	<input type="password" name="pass" class="input" required>
             	   </div>
             	</div>
-            	<a href="registro_maestro">No estás registrado? Registrate aquí</a>
+            	<a href="registros">No estás registrado? Registrate aquí</a>
             	<a href="correo">Has olvidado tú contraseña? Has clic aquí</a>
             	<a href="https://panel.josprox.ovh">¿Eres de servicio escolar? has clic aquí</a>
             	<input name="ingresar" type="submit" class="btn" value="Iniciar sesión">

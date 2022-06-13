@@ -105,7 +105,7 @@ if (isset($_POST["ingresar"])) {
 					</span>
 
 					<div class="text-center p-t-90">
-						<a class="txt1" href="../registrov2.php">
+						<a class="txt1" href="../registros">
 							¿No estás registrado? registrate en Cetis CWP para poder acceder
 						</a>
 					</div>

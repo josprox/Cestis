@@ -13,7 +13,7 @@ Este sistema está programado en PHP.
 
 - Facilito F(x) sites creado por JOSPROX MX | Internacional: Este framework dá la estructura para el panel del alumno y maestro (back-end), conectado hacia la base de datos y leyendo cada tabla necesaria para mostrarle información tanto al alumno (usuario) cómo al maestro.
 
-- Laravel con livewire: Le permite al administrador poder crear, leer, actualizar o eliminar datos de las tablas que aporta la base de datos (CRUD).
+- Laravel con livewire: Le permite al administrador poder crear, leer, actualizar o eliminar datos de las tablas que aporta la base de datos (CRUD), podrás descargarlo como un plugin <a href="https://github.com/josprox/Laravel-CCWP">dando clic aquí</a> y configurandolo. Se recomienda tener conocimientos con este framework.
 
 ## El diseño de Cetis CWP está basado en:
 
@@ -123,8 +123,6 @@ Listo, desde ahora podrás correr de una manera segura Cetis CWP.
 - Se recomienda usar un panel de control para administrar el servidor, puede usar sin problemas Cpanel y Hestia Control Panel. De preferencia debería usar <a href="https://hestiacp.com/">Hestia Control Panel</a>.
 
 - En caso de pruebas y mejoras, se recomienda usar XAMPP con php 8.1.0 o superior, debiado a que, fué programado con esa versión.
-
-- Se le recomienda separar la carpeta "./admin/" con un subdominio, de esta manera podrá ejecutarse de una forma correcta y será más dificil que sufra un ataque al servidor.
 
 - Para tener un buen funcionamiento, se recomienda que una vez subidos los archivos, ponle los todos los permisos de leer, escribir y ejecutar (permiso 777).
 

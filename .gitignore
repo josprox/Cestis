@@ -48,3 +48,7 @@ $RECYCLE.BIN/
 # smtp-start
 
 /social/home/smtp/correo.php
+
+# Eliminación de Laravel como un archivo importante para cetis cwp y agregandolo como un plugin.
+
+/admin

@@ -35,8 +35,11 @@ $row = $resultado->fetch_assoc();
 
 if(isset($_POST["info"])){
     $contenido = mysqli_real_escape_string($conexion,$_POST['contenido']);
+    $fb = mysqli_real_escape_string($conexion,$_POST['facebook']);
+    $twt = mysqli_real_escape_string($conexion,$_POST['twt']);
+    $insta = mysqli_real_escape_string($conexion,$_POST['insta']);
 
-    $sql = "INSERT INTO social (id_usuario, info_datos) VALUES ('$iduser','$contenido')";
+    $sql = "INSERT INTO social (id_usuario, info_datos, fb, twt, inst) VALUES ('$iduser','$contenido', '$fb', '$twt', '$insta')";
     $insertar_social = $conexion->query($sql);
     echo "<script>
 			alert('Se han guardado los datos correctamente');
@@ -63,6 +66,8 @@ if(isset($_POST["info"])){
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="./textarea/jquery.richtext.js"></script>
     <link rel="icon" type="image/png" href="../images/logo.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/4a5e39d1d1.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -89,10 +94,30 @@ if(isset($_POST["info"])){
                 <label for="contenido" class="form-label"><h3 class="antesubtitulos">Agrega tu información personal con el cuál te presentarás.</h3></label>
                 <textarea name="contenido" class="form-control textarea" id="contenido" rows="3" required></textarea>
 
+                <label for="contenido" class="form-label"><h3 class="antesubtitulos">Agrega tus redes sociales para que te puedan contactar.</h3></label>
+
+                <div class="redes">
+                    <label for="facebook" class="form_lb"><i class="fa-brands fa-facebook"></i> Facebook</label>
+                    <label type="text" name="facebook" id="facebook_no_move" class="form_lb_disabled">https://www.facebook.com/</label>
+                    <input type="text" name="facebook" id="facebook" class="form_inp" placeholder="https://www.facebook.com/" value="">
+                </div>
+
+                <div class="redes">
+                    <label for="twt" class="form_lb"><i class="fa-brands fa-twitter"></i> Twitter</label>
+                    <label type="text" id="twt_no_move" class="form_lb_disabled">https://twitter.com/</label>
+                    <input type="text" name="twt" id="twt" class="form_inp" placeholder="https://twitter.com/" value="">
+                </div>
+
+                <div class="redes">
+                    <label for="insta" class="form_lb"><i class="fa-brands fa-instagram"></i> Instagram</label>
+                    <label type="text" id="insta_no_move" class="form_lb_disabled">https://www.instagram.com/</label>
+                    <input type="text" name="insta" id="insta" class="form_inp" placeholder="https://www.instagram.com/" value="">
+                </div>
+
                 <center>
-                <input value="Actualizar información." name="info" type="submit" class="act_info_personal">
+                <input value="Actualizar información" name="info" type="submit" class="act_info_personal">
                 </center>
-            </form>
+            </form> 
 
         </div>
 

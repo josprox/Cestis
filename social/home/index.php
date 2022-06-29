@@ -27,12 +27,12 @@ if ($filas < 1) {
     header("Location: ./bienvenido");
 }
 
-$amix = "SELECT usuarios.usuario, usuarios.nombre, usuarios.img, usuarios.correo, social.info_datos FROM usuarios INNER JOIN social ON usuarios.id = social.id_usuario ORDER BY RAND() LIMIT 1;";
+$amix = "SELECT usuarios.usuario, usuarios.nombre, usuarios.img, usuarios.correo, social.info_datos FROM usuarios INNER JOIN social ON usuarios.id = social.id_usuario WHERE id_usuario != '$iduser' ORDER BY RAND() LIMIT 1 ";
 
 $amix_rest = $conexion->query($amix);
 $lectura = $amix_rest->fetch_assoc();
 
-$sql_datos = "SELECT usuarios.usuario, usuarios.nombre, usuarios.img, usuarios.correo, social.info_datos FROM usuarios INNER JOIN social ON usuarios.id = social.id_usuario WHERE usuarios.id = $iduser;";
+$sql_datos = "SELECT usuarios.usuario, usuarios.nombre, usuarios.img, usuarios.correo, social.info_datos, social.fb, social.twt, social.inst FROM usuarios INNER JOIN social ON usuarios.id = social.id_usuario WHERE usuarios.id = $iduser;";
 
 $datos_rest = $conexion->query($sql_datos);
 $post_lect = $datos_rest->fetch_assoc();
@@ -88,6 +88,9 @@ $post_lect = $datos_rest->fetch_assoc();
                         <input type="hidden" name="minombre" value="<?php echo $post_lect['nombre']; ?>">
                         <input type="hidden" name="miimg" value="<?php echo $post_lect['img'];?>">
                         <input type="hidden" name="miinfo" value="<?php echo $post_lect['info_datos']; ?>">
+                        <input type="hidden" name="fb" value="<?php echo $post_lect['fb']; ?>">
+                        <input type="hidden" name="twt" value="<?php echo $post_lect['twt']; ?>">
+                        <input type="hidden" name="inst" value="<?php echo $post_lect['inst']; ?>">
                         <input type="hidden" name="correo" value="<?php echo $lectura['correo']; ?>">
                         <input type="submit" value="Agregar" class="agregar">
                     </form>

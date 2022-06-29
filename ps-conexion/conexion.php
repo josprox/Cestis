@@ -12,12 +12,5 @@ function connect(){
         printf("Error código CCWP_681_utf8, no se puede cargar el conjunto de caracteres utf8: %s\n", $conexion->error);
         exit();
     }
-//$conexion = new mysqli('localhost',"root", "","cestis");
-//if (mysqli_connect_errno()){
-//    echo "No conectado",mysqli_connect_error();
-//    exit();
-//}else{
-//    echo "Conectado";
-//}
 
 ?> 

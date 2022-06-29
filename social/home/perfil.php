@@ -27,7 +27,7 @@ if ($filas < 1) {
     header("Location: ./bienvenido");
 }
 
-$sql = "SELECT usuarios.usuario, usuarios.img, usuarios.nombre, usuarios.correo, usuarios.num_control, social.info_datos FROM usuarios INNER JOIN social ON usuarios.id = social.id_usuario WHERE usuarios.id = '$iduser'";
+$sql = "SELECT usuarios.usuario, usuarios.img, usuarios.nombre, usuarios.correo, usuarios.num_control, social.info_datos, social.fb, social.twt, social.inst FROM usuarios INNER JOIN social ON usuarios.id = social.id_usuario WHERE usuarios.id = '$iduser'";
 
 $resultado = $conexion->query($sql);
 $row = $resultado->fetch_assoc();
@@ -41,6 +41,19 @@ if (isset($_POST["info"])){
 			alert('Se ha guardado los datos correctamente');
 			window.location= './perfil';
 		</script>";
+}
+
+if (isset($_POST["redes"])) {
+    $fb = mysqli_real_escape_string($conexion,$_POST['facebook']);
+    $twt = mysqli_real_escape_string($conexion,$_POST['twt']);
+    $insta = mysqli_real_escape_string($conexion,$_POST['insta']);
+
+    $sql_redes = "UPDATE `social` SET `fb` = '$fb', `twt` = '$twt', `inst` = '$insta' WHERE `social`.`id_usuario` = $iduser";
+    $insertar_redes = $conexion->query($sql_redes);
+    echo "<script>
+            alert('Se ha guardado los datos correctamente');
+            window.location= './perfil';
+        </script>";
 }
 
 if (isset($_POST["btn_enviar"])) {
@@ -121,6 +134,7 @@ if (isset($_POST["btn_enviar"])) {
 
             <div class="grid_2">
                 <center>
+
                     <form action="<?php $_SERVER["PHP_SELF"]; ?>" method="POST" enctype="multipart/form-data">
                         <input type="hidden" name="MAX_TAM" value="2097152" />
                         <div id="div_file">
@@ -129,6 +143,7 @@ if (isset($_POST["btn_enviar"])) {
                         </div>
                         <input type="submit" class="update" name="btn_enviar" id="btn_enviar" value="Subir" />
                     </form>
+
                 </center>
             </div>
 
@@ -146,6 +161,10 @@ if (isset($_POST["btn_enviar"])) {
             <p><?php echo $row['nombre'] ?></p>
             <p>Información personal:</p>
             <p><?php echo $row['info_datos'] ?></p>
+            <p>Tus redes sociales:</p>
+            <p><i class="fa-brands fa-facebook"></i> Facebook: <a href="https://www.facebook.com/<?php echo $row['fb'] ?>">@<?php echo $row['fb'] ?></a></p>
+            <p><i class="fa-brands fa-twitter"></i> Twitter: <a href="https://twitter.com/<?php echo $row['twt'] ?>">@<?php echo $row['twt'] ?></a></p>
+            <p><i class="fa-brands fa-instagram"></i> Instagram: <a href="https://www.instagram.com/<?php echo $row['inst'] ?>">@<?php echo $row['inst'] ?></a></p>
         </div>
 
         <div class="formulario">
@@ -156,6 +175,32 @@ if (isset($_POST["btn_enviar"])) {
 
                 <center>
                 <input value="Actualizar" name="info" type="submit" class="act_info_personal">
+                </center>
+            </form>
+
+            <form action="<?php $_SERVER["PHP_SELF"]; ?>" method="POST">
+                <label for="contenido" class="form-label"><h3 class="antesubtitulos">Agrega tus redes sociales para que te puedan contactar.</h3></label>
+
+                <div class="redes">
+                    <label for="facebook" class="form_lb"><i class="fa-brands fa-facebook"></i> Facebook</label>
+                    <label type="text" name="facebook" id="facebook_no_move" class="form_lb_disabled">https://www.facebook.com/</label>
+                    <input type="text" name="facebook" id="facebook" class="form_inp" placeholder="https://www.facebook.com/" value="<?php echo $row['fb'] ?>">
+                </div>
+
+                <div class="redes">
+                    <label for="twt" class="form_lb"><i class="fa-brands fa-twitter"></i> Twitter</label>
+                    <label type="text" id="twt_no_move" class="form_lb_disabled">https://twitter.com/</label>
+                    <input type="text" name="twt" id="twt" class="form_inp" placeholder="https://twitter.com/" value="<?php echo $row['twt'] ?>">
+                </div>
+
+                <div class="redes">
+                    <label for="insta" class="form_lb"><i class="fa-brands fa-instagram"></i> Instagram</label>
+                    <label type="text" id="insta_no_move" class="form_lb_disabled">https://www.instagram.com/</label>
+                    <input type="text" name="insta" id="insta" class="form_inp" placeholder="https://www.instagram.com/" value="<?php echo $row['inst'] ?>">
+                </div>
+
+                <center>
+                <input value="Actualizar" name="redes" type="submit" class="act_info_personal">
                 </center>
             </form>
 

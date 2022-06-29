@@ -1,0 +1,5 @@
+<?php
+
+$dominio = "example.com";
+
+?>

@@ -10,6 +10,8 @@ require 'vendor/autoload.php';
 require 'phpmail/Exception.php';
 require 'phpmail/PHPMailer.php';
 require 'phpmail/SMTP.php';
+// Load Domain Generated Class
+require 'dominio.php';
 
 //Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer(true);
@@ -19,6 +21,9 @@ $micorreo = $_POST['micorreo'];
 $minombre = $_POST['minombre'];
 $miimg = $_POST['miimg'];
 $miinfo = $_POST['miinfo'];
+$fb = $_POST['fb'];
+$twt = $_POST['twt'];
+$inst = $_POST['inst'];
 $correo = $_POST['correo'];
 
 
@@ -312,7 +317,7 @@ $cuerpohtml='
               <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                 <tr>
                   <td class="logo" style="text-align: center;">
-                    <h1><a href="#">Cristal</a></h1>
+                    <h1><a href="https://'.$dominio.'/">Cristal</a></h1>
                   </td>
                 </tr>
               </table>
@@ -331,7 +336,7 @@ $cuerpohtml='
                 <tr>
                   <td style="text-align: center;">
                     <div class="text-author">
-                      <img src="https://josprox.ovh/ps-contenido/img/alumnos/'.$miimg.'" alt="" style="width: 100px; max-width: 600px; height: 100px; max-height: 600px; margin: auto; display: block; object-fit: cover;">
+                      <img src="https://'.$dominio.'/ps-contenido/img/alumnos/'.$miimg.'" alt="" style="width: 100px; max-width: 600px; height: 100px; max-height: 600px; margin: auto; display: block; object-fit: cover;">
                       <h3 class="name">Usuario: '.$miusuario.'</h3>
                       <span class="position">Nombre Completo: '.$minombre.'</span>
                     </div>
@@ -361,9 +366,12 @@ $cuerpohtml='
                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                       <tr>
                         <td style="text-align: left; padding-left: 5px; padding-right: 5px;">
-                          <h3 class="heading">Correo de contacto</h3>
+                          <h3 class="heading">Formas de contacto contacto</h3>
                           <ul>
-                            <li><span class="text">'.$micorreo.'</span></a></li>
+                            <li><span class="text">'.$micorreo.'</span></li>
+                            <li><a href="https://www.facebook.com/'.$fb.'"><span class="text">Facebook: @'.$fb.'</span></a></li>
+                            <li><a href="https://twitter.com/'.$twt.'"><span class="text">Twitter: @'.$twt.'</span></a></li>
+                            <li><a href="https://www.instagram.com/'.$inst.'"><span class="text">Instagram: @'.$inst.'</span></a></li>
                           </ul>
                         </td>
                       </tr>
@@ -375,9 +383,9 @@ $cuerpohtml='
                         <td style="text-align: left; padding-left: 10px;">
                           <h3 class="heading">JOSPROX MX</h3>
                           <ul>
-                            <li><a href="https://josprox.ovh/">Cetis CWP</a></li>
-                            <li><a href="https://josprox.ovh/social/">Cristal</a></li>
-                            <li><a href="https://josprox.com/">JOSPROX MX</a></li>
+                            <li><a href="https://'.$dominio.'/">Cetis CWP</a></li>
+                            <li><a href="https://'.$dominio.'/social/">Cristal</a></li>
+                            <li><a href="https://josprox.com/">Creador JOSPROX MX</a></li>
                           </ul>
                         </td>
                       </tr>

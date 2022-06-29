@@ -226,6 +226,7 @@ if (isset($_POST["registrar_mst"])) {
                 <a href="./social/"><i class="fa-solid fa-school" target="_blank" rel="noopener noreferrer"></i></a>
             </div>
 
+            <center>
             <form id="login" action="<?php $_SERVER["PHP_SELF"]; ?>" method="POST" class="input_group">
 
                 <input type="text" class="input_field" placeholder="¿Cuál es tu nombre?" name="user_name" required>
@@ -366,6 +367,8 @@ if (isset($_POST["registrar_mst"])) {
 
                 <button type="submit" name="registrar_mst" class="enviar_boton">Registrarse</button>
             </form>
+
+            </center>
 
         </div>
     </div>

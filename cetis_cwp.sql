@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-06-2022 a las 03:24:43
+-- Tiempo de generación: 29-06-2022 a las 02:07:58
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -327,35 +327,12 @@ CREATE TABLE `notifications` (
 --
 
 INSERT INTO `notifications` (`id`, `tipo`, `Contenido`, `created_at`, `updated_at`) VALUES
-(2, 'Información', 'Desde ahora podrás agregar otro grado, grupo y especialidad, así podrás publicar en su panel de estudiante.', '2022-04-23 02:08:25', '2022-04-23 02:08:25'),
-(3, 'Alerta secundaria', 'La información de la versión TIMELINE v5.0.1 beta 2 ya se encuentra disponible para su descarga, <a href=\"https://next.josprox.com/nextcloud/index.php/s/G5t7TPAwydYyDa9/download/v5.0.1%20beta2.docx\" class=\"text-white\">Clic aquí</a>.', '2022-04-23 02:14:00', '2022-04-23 02:24:47'),
-(4, 'Alerta secundaria', 'La información de la versión TIMELINE 6.0.1 Beta 4 ya se encuentra disponible para su descarga, <a href=\"https://next.josprox.com/nextcloud/index.php/s/96etf5cEqcdLjwW/download/TIMELINE%20versi%C3%B3n%206.0.1%20beta%204.docx\" class=\"text-white\">Clic aquí</a>.', '2022-04-23 02:22:08', '2022-04-23 02:27:20'),
-(5, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 6.1', '2022-04-23 02:23:51', '2022-04-23 02:23:51'),
-(6, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.1 ya se encuentra disponible para su descarga, <a href=\"https://next.josprox.com/nextcloud/index.php/s/2PYxHkR54fc9cfP/download/Cetis%20CWP%20timelinet%20versi%C3%B3n%206.1.pdf\" class=\"text-white\">Clic aquí</a>.', '2022-04-23 06:17:14', '2022-04-23 06:17:14'),
-(7, 'Información', 'Desde este momento, la sección de notificaciones está funcionando, se recomienda que cheques las mejoras de la nueva versión de Cetis CWP timelinet versión 6.1.', '2022-04-23 06:19:51', '2022-04-23 06:20:09'),
-(8, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 6.1.1', '2022-04-24 23:45:25', '2022-04-24 23:45:25'),
-(9, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.1.1 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP#timeline-versi%C3%B3n-611-soluci%C3%B3n-de-errores\" class=\"text-white\">Clic aquí.</a>', '2022-04-25 01:16:36', '2022-04-25 01:19:03'),
-(10, 'Información', 'Ahora podrás descargar el proyecto COMPLETO desde github. <a href=\"https://github.com/josprox/Cetis-CWP/\" class=\"text-white\">Vamos allá.</a>', '2022-04-25 01:20:31', '2022-04-25 01:21:05'),
-(11, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 6.2', '2022-05-01 07:25:37', '2022-05-01 07:25:37'),
-(12, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.2 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.2\" class=\"text-white\">Clic aquí.</a>', '2022-05-01 07:26:43', '2022-05-01 07:26:43'),
-(13, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 6.3.3', '2022-05-11 02:54:10', '2022-05-11 02:54:10'),
-(14, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.3.3 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.3\" class=\"text-white\">Clic aquí.</a>', '2022-05-11 02:54:42', '2022-05-11 02:54:42'),
-(15, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 6.4 beta 1', '2022-05-15 06:31:23', '2022-05-15 06:31:23'),
-(16, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.4 beta 1 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.4-beta.1\" class=\"text-white\">Clic aquí.</a>', '2022-05-15 06:32:56', '2022-05-15 06:32:56'),
-(17, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 6.4', '2022-05-24 04:57:55', '2022-05-24 04:57:55'),
-(18, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.4 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.4\" class=\"text-white\">Clic aquí.</a>', '2022-05-24 04:58:41', '2022-05-24 04:58:41'),
-(19, 'Información', 'Ahora podrás instalar Cetis CWP con tan solo muy pocos pasos, descarga desde \"releases\" el archivo \"installer.rar\" de la versión que necesites.', '2022-05-24 05:00:37', '2022-05-24 05:00:37'),
-(20, 'Alerta primaria', 'Cetis CWP 6.4 es la versión más actualizada y estable. Un sistema de JOSPROX MX | Internacional', '2022-05-24 05:02:33', '2022-05-24 05:03:09'),
-(21, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 6.5', '2022-05-26 06:55:04', '2022-05-26 06:55:04'),
-(22, 'Peligro', 'Encontramos posibles vulnerabilidades de seguridad en dependencias antiguas, si has actualizado a Cetis CWP 6.5 no hay de que preocuparse.', '2022-05-26 06:56:21', '2022-05-26 06:56:21'),
-(23, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.5 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.5\" class=\"text-white\">Clic aquí.</a>', '2022-05-26 06:56:55', '2022-05-26 06:56:55'),
-(24, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 6.6', '2022-06-04 04:50:45', '2022-06-04 04:50:45'),
-(25, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.6 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.6\" class=\"text-white\">Clic aquí.</a>', '2022-06-04 04:51:06', '2022-06-04 04:51:06'),
-(26, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 6.7', '2022-06-10 02:24:12', '2022-06-10 02:24:12'),
-(27, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.7 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.7\" class=\"text-white\">Clic aquí.</a>', '2022-06-10 02:24:35', '2022-06-10 02:24:35'),
-(28, 'Alerta primaria', 'Te encuentras en la versión más estable de Cetis CWP', '2022-06-10 02:25:38', '2022-06-10 02:25:38'),
-(29, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 6.8', '2022-06-13 06:23:34', '2022-06-13 06:23:34'),
-(30, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.8 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.8\" class=\"text-white\">Clic aquí.</a>', '2022-06-13 06:23:49', '2022-06-13 06:23:49');
+(31, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 6.9', '2022-06-29 04:50:29', '2022-06-29 04:50:29'),
+(32, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.9 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.9\" class=\"text-white\">Clic aquí.</a>', '2022-06-29 04:50:47', '2022-06-29 04:50:47'),
+(33, 'Alerta primaria', 'El sistema se encuentra en la versión más estable de Cetis CWP.', '2022-06-29 04:51:33', '2022-06-29 04:51:33'),
+(34, 'Advertencia', 'Ya no se recomienda la instalación de Cetis CWP versión 6.5, pues se han encontrado varias vulnerabilidades.', '2022-06-29 04:54:05', '2022-06-29 04:54:05'),
+(35, 'Peligro', 'Si acabas de actualizar a la versión 6.9 y sigues ocupando la carpeta /admin/ dentro de Cetis CWP, se recomienda eliminarlo e instalar el nuevo complemento llamado Laravel CCWP. Si acabas de instalar la versión 6.9, no tendrás de qué preocuparte.', '2022-06-29 04:56:10', '2022-06-29 04:56:10'),
+(36, 'Información', 'Si deseas instalar la versión para administración, podrás instalarlo desde su <a class=\"text-white\" href=\"https://github.com/josprox/Laravel-CCWP\"> repositiorio, da clic aquí o busca Laravel CCWP</a>, recuerda que ya no es obligatorio la instalación del CRUD para administración desde Cetis CWP 6.8.', '2022-06-29 04:59:24', '2022-06-29 05:00:44');
 
 -- --------------------------------------------------------
 
@@ -512,6 +489,9 @@ CREATE TABLE `social` (
   `id` bigint(11) NOT NULL,
   `id_usuario` bigint(11) NOT NULL,
   `info_datos` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fb` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `twt` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `inst` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -520,10 +500,10 @@ CREATE TABLE `social` (
 -- Volcado de datos para la tabla `social`
 --
 
-INSERT INTO `social` (`id`, `id_usuario`, `info_datos`, `created_at`, `updated_at`) VALUES
-(1, 31, '<div><div>Hola mucho gusto, te voy a contar un poco de mi, me gusta jugar videojuegos, salir con amigos, escuchar música y muchas cosas más.</div><div>Te invito a que me conozcas agregándome.</div></div>', NULL, NULL),
-(2, 33, 'Soy una persona sociable, me gusta escuchar música y trabajar.', NULL, NULL),
-(3, 38, '<div>Me gusta todo tipo de música, hacer actividades al aire libre, salir con mis amigos, me gusta todo lo que tenga que ver con la naturaleza, me gustan mucho los animales, soy muy sociable y me gusta salir de mi zona de confort.</div>', NULL, NULL);
+INSERT INTO `social` (`id`, `id_usuario`, `info_datos`, `fb`, `twt`, `inst`, `created_at`, `updated_at`) VALUES
+(1, 31, '<div><div>Hola mucho gusto, te voy a contar un poco de mi, me gusta jugar videojuegos, salir con amigos, escuchar música y muchas cosas más.</div><div>Te invito a que me conozcas agregándome.</div></div>', 'jossestrada.mx', 'josprox', 'josprox', NULL, NULL),
+(2, 33, 'Soy una persona sociable, me gusta escuchar música y trabajar.', 'raul.seb.397', '', 'alexs4110', NULL, '2022-06-29 04:46:57'),
+(3, 38, '<div>Me gusta todo tipo de música, hacer actividades al aire libre, salir con mis amigos, me gusta todo lo que tenga que ver con la naturaleza, me gustan mucho los animales, soy muy sociable y me gusta salir de mi zona de confort.</div>', 'profile.php?id=100011001433745', '', 'eriicksanchez_', NULL, '2022-06-29 04:45:34');
 
 -- --------------------------------------------------------
 
@@ -808,7 +788,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de la tabla `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT de la tabla `numcontrols`
@@ -838,7 +818,7 @@ ALTER TABLE `sexo`
 -- AUTO_INCREMENT de la tabla `social`
 --
 ALTER TABLE `social`
-  MODIFY `id` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `turnos`

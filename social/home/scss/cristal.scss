@@ -5,6 +5,24 @@ body{
     background: linear-gradient(180deg, rgba(40,124,231,1) 0%, rgba(41,212,207,1) 52%, rgba(206,72,238,1) 100%);
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    &::-webkit-scrollbar {
+      width: 12px;
+      background: rgb(245, 93, 165);
+      background: linear-gradient(180deg, rgba(245, 93, 165, 1) 0%, rgba(221, 124, 210, 1) 50%, rgba(0, 255, 179, 1) 100%);
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: rgb(240, 137, 103);
+      background: linear-gradient(0deg, rgba(240, 137, 103, 1) 0%, rgba(247, 205, 107, 1) 50%, rgba(221, 228, 110, 1) 100%);
+      border-radius: 8px;
+    }
+  }
+
 a{
     text-decoration: none;
 }
@@ -232,6 +250,13 @@ img{
     p{
         margin: 5px 8px;
     }
+    a{
+        color: aliceblue;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
 }
 
 .formulario{
@@ -254,7 +279,6 @@ img{
         font:          normal bold 26px/1 "Open Sans", sans-serif;
         text-align:    center;
         border: none;
-        cursor: pointer;
     }
 }
 
@@ -283,3 +307,50 @@ input#imagen {
     width: 100%;
     height: 100%;
   }
+
+.redes{
+    // Agregar lo necesario para hacer un grid template
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(50px, auto);
+    grid-template-areas:
+        "form_lb form_lb form_lb"
+        "form_lb_disabled form_inp form_inp";
+    margin: 8px 6px;
+    padding: 5px;
+    @media screen and (min-width: 920px) {
+        &{
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas:
+                "form_lb form_lb_disabled form_inp form_inp";
+        }
+    }
+    
+    .form_lb_disabled{
+        grid-area: form_lb_disabled;
+        margin: 12px 8px;
+        border-radius: 12px;
+        color: #fff;
+    }
+    .form_lb{
+        grid-area: form_lb;
+        margin: 12px 8px;
+        label{
+            color: #fff;
+        }
+    }
+    .form_inp{
+        grid-area: form_inp;
+        margin: 12px 8px;
+        width: 100%;
+        border: none;
+        border-radius: 12px;
+        padding: 12px;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: aliceblue;
+        margin: 8px 5px;
+        &:focus{
+            outline: none;
+        }
+    }
+}

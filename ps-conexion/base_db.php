@@ -8,9 +8,9 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__, '../.env');
 $dotenv->load();
 
 //Valores de la conexión
-    $usuario = $_ENV['Usuario'];
-    $contra = $_ENV['Contra'];
-    $database = $_ENV['BaseDeDatos'];
-    $host = $_ENV['host'];
+    $usuario = $_ENV['USUARIO'];
+    $contra = $_ENV['CONTRA'];
+    $database = $_ENV['BASE_DE_DATOS'];
+    $host = $_ENV['HOST'];
 
 ?>

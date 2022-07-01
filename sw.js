@@ -1,6 +1,6 @@
 ;
 //asignar un nombre y versión al cache
-const CACHE_NAME = 'v1_cestis_cwp',
+const CACHE_NAME = 'v2_Cetis_CWP',
   urlsToCache = [
     './',
     './ps-contenido/css/facilito-fx.min.css',
@@ -9,7 +9,8 @@ const CACHE_NAME = 'v1_cestis_cwp',
     './app/style.css',
     './app/script.js',
     './ps-contenido/app img/default.png',
-    './ps-contenido/img/logo.webp'
+    './ps-contenido/img/logo.webp',
+    './ps-contenido/img/alumnos/main.webp'
   ]
 
 //durante la fase de instalación, generalmente se almacena en caché los activos estáticos

@@ -37,38 +37,64 @@ if (isset($_POST["btn_enviar"])) {
       }
 
   }else{
-      echo "<script>
-    alert('Entrada correcta');
-    window.location= './';
-  </script>";
+
       if ((isset($_FILES['imagen']['name'])&&($_FILES['imagen']['error']==UPLOAD_ERR_OK))){
 
           $destino_de_ruta ="../ps-contenido/img/maestros/";
 
           move_uploaded_file($_FILES['imagen']['tmp_name'],$destino_de_ruta . $_FILES['imagen']['name']);
 
-          echo "<script>
-    alert('El archivo " . $_FILES['imagen']['name'] . " se ha copiado en el directorio de imagenes');
-    window.location= './';
-  </script>";
       }else{
           echo "El archivo no se ha podido copiar a imagenes";
       }
   }
 
+  $img_datos = "SELECT img FROM maestros WHERE id = '$iduser'";
 
+$consulta_img = $conexion->query($img_datos);
+
+$info_img = $consulta_img->fetch_assoc();
+
+$img_actual = $info_img['img'];
+
+if ($img_actual == "main.webp") {
+    
   $myconsulta ="UPDATE maestros SET img = '$imagen' WHERE maestros.id = '$iduser'";
 
-  $resultado = mysqli_query($conexion, $myconsulta);
+    $resultado = mysqli_query($conexion, $myconsulta);
 
-  /* Cerramos conexion */
+    /* Cerramos conexion */
 
-  /*mysqli_close($conexion);*/
+    /*mysqli_close($conexion);*/
 
-  echo "<script>
-    alert('La imagen fue actualizada correctamente');
-    window.location= './';
-  </script>";
+    echo "<script>
+            alert('La imagen fue actualizada correctamente. Codigo: perfil_img_1');
+            window.location= './';
+        </script>";
+}else{
+
+    if (unlink("../ps-contenido/img/maestros/$img_actual")){
+    $myconsulta ="UPDATE maestros SET img = '$imagen' WHERE maestros.id = '$iduser'";
+    
+        $resultado = mysqli_query($conexion, $myconsulta);
+    
+        /* Cerramos conexion */
+    
+        /*mysqli_close($conexion);*/
+    
+        echo "<script>
+                alert('La imagen fue actualizada correctamente. Codigo: perfil_img_2');
+                window.location= './';
+            </script>";
+    }else{
+        echo "<script>
+                alert('La imagen fue subida al servidor pero no se pudo actualizar en la base de datos. Error: perfil_img_221');
+                window.location= './';
+            </script>";
+    }
+
+}
+
 }
 
 if (isset($_POST["publicar"])) {

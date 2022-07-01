@@ -43,16 +43,9 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/windows,linux
-
-# smtp-start
-
-/social/home/smtp/correo.php
-
-# smtp-start_domain
-
-/social/home/smtp/dominio.php
-
 # Eliminación de Laravel como un archivo importante para cetis cwp y agregandolo como un plugin.
 
 /admin
+
+# Evitar archivos .env
+.env

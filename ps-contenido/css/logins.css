@@ -160,25 +160,25 @@ a:hover{
 	color: #38d39f;
 }
 
-.btn{
-	display: block;
+
+.btn_redirect{
+	background:    #93c47d;
+	background:    linear-gradient(#93c47d, #45818e);
+	border-radius: 1000px;
+	padding:       20px 45px;
+	color:         #ffffff;
+	display:       inline-block;
+	font:          normal bold 1.2em/1 "Open Sans", sans-serif;
+	text-align:    center;
+	transition: .2s all;
 	width: 100%;
-	height: 50px;
-	border-radius: 25px;
-	outline: none;
+	margin: 8px 5px;
 	border: none;
-	background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
-	background-size: 200%;
-	font-size: 1.2rem;
-	color: #fff;
-	font-family: 'Poppins', sans-serif;
-	text-transform: uppercase;
-	margin: 1rem 0;
-	cursor: pointer;
-	transition: .5s;
 }
-.btn:hover{
-	background-position: right;
+.btn_redirect:hover{
+	background:    #d9d2e9;
+	background:    linear-gradient(#d9d2e9, #45818e);
+	color: #ffffff;
 }
 
 

@@ -1,9 +1,16 @@
 <?php
 
+// Código generado por Jossito Security
+
+require __DIR__ . '/../vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__, '../.env');
+$dotenv->load();
+
 //Valores de la conexión
-    $usuario = "root";
-    $contra = "";
-    $database = "cetis_cwp";
-    $host = "localhost";
+    $usuario = $_ENV['Usuario'];
+    $contra = $_ENV['Contra'];
+    $database = $_ENV['BaseDeDatos'];
+    $host = $_ENV['host'];
 
 ?>

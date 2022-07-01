@@ -4,6 +4,20 @@
   list-style: none;
 }
 
+*::-webkit-scrollbar {
+  width: 12px;
+  background: #f55da5;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f55da5), color-stop(50%, #dd7cd2), to(#00ffb3));
+  background: linear-gradient(180deg, #f55da5 0%, #dd7cd2 50%, #00ffb3 100%);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #f08967;
+  background: -webkit-gradient(linear, left bottom, left top, from(#f08967), color-stop(50%, #f7cd6b), to(#dde46e));
+  background: linear-gradient(0deg, #f08967 0%, #f7cd6b 50%, #dde46e 100%);
+  border-radius: 8px;
+}
+
 body {
   background-color: #FA8BFF;
   background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);

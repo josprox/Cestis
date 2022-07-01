@@ -41,59 +41,8 @@ $arg_alumno = $rest_arg_alumno -> fetch_assoc();
 
 if (isset($_POST["btn_enviar"])) {
 
-    $imagen = $_FILES['imagen']['name'];
+    include_once "ps-includes/check_img.php";
 
-    if($_FILES['imagen']['error']){
-
-        switch($_FILES['imagen']['error']){
-            case 1: // Error exceso de tamaño de archivo php.ini
-                echo"Tamaño del Archivo excede lo permitido por el server";
-            break;
-
-            case 2: //Excede la directiva MAX_FILE
-                echo "EL TAMAÑO DEL ARCHIVO EXCEDE";
-            break;
-            case 3: //El fichero fue solo parcialmente subido
-                echo "Corrupción de archivo";
-            break;
-            case 4: //No se subio el fichero
-                echo "No se envió archivo de imagen";
-            break;
-        }
-
-    }else{
-        echo "<script>
-			alert('Entrada correcta');
-			window.location= './perfil';
-		</script>";
-        if ((isset($_FILES['imagen']['name'])&&($_FILES['imagen']['error']==UPLOAD_ERR_OK))){
-
-            $destino_de_ruta ="ps-contenido/img/alumnos/";
-
-            move_uploaded_file($_FILES['imagen']['tmp_name'],$destino_de_ruta . $_FILES['imagen']['name']);
-
-            echo "<script>
-			alert('El archivo " . $_FILES['imagen']['name'] . " se ha copiado en el directorio de imagenes');
-			window.location= './perfil';
-		</script>";
-        }else{
-            echo "El archivo no se ha podido copiar a imagenes";
-        }
-    }
-
-
-    $myconsulta ="UPDATE usuarios SET img = '$imagen' WHERE usuarios.id = '$iduser'";
-
-    $resultado = mysqli_query($conexion, $myconsulta);
-
-    /* Cerramos conexion */
-
-    /*mysqli_close($conexion);*/
-
-    echo "<script>
-			alert('La imagen fue actualizada correctamente');
-			window.location= './perfil';
-		</script>";
 }
 
 ?>

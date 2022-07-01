@@ -12,10 +12,10 @@
 
  <?php 
 
-include "./../ps-conexion/conexion.php";
+include "./ps-conexion/conexion.php";
 session_start();
 if (isset($_SESSION['id_usuario'])) {
-    header("Location: ./../panel");
+    header("Location: ./panel");
 }
 //Login
 //if (!empty($_POST)) {
@@ -31,7 +31,7 @@ if (isset($_POST["ingresar"])) {
 
         if(password_verify($password,$password_encriptada) == TRUE){
           $_SESSION['id_usuario'] = $row['id'];
-          header("Location: ../panel");
+          header("Location: panel");
         }else{
           echo "<script>
           alert('Contraseña incorrecta, vuélvelo a intentar o cambia la contraseña. Error CCWP-232_allinone');
@@ -140,9 +140,9 @@ if ($filas1 > 1) {
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'>
-<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'><link rel="stylesheet" href="./app/style.css">
 
-<?php include "../ps-includes/metas.php"; ?>
+<?php include "./ps-includes/metas.php"; ?>
 
 </head>
 <body>
@@ -240,7 +240,7 @@ if ($filas1 > 1) {
 </div>
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script  src="./script.js"></script>
+  <script  src="./app/script.js"></script>
 
 </body>
 </html>

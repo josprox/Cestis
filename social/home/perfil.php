@@ -58,50 +58,7 @@ if (isset($_POST["redes"])) {
 
 if (isset($_POST["btn_enviar"])) {
 
-    $imagen = $_FILES['imagen']['name'];
-
-    if($_FILES['imagen']['error']){
-
-        switch($_FILES['imagen']['error']){
-            case 1: // Error exceso de tamaño de archivo php.ini
-                echo"Tamaño del Archivo excede lo permitido por el server";
-            break;
-
-            case 2: //Excede la directiva MAX_FILE
-                echo "EL TAMAÑO DEL ARCHIVO EXCEDE";
-            break;
-            case 3: //El fichero fue solo parcialmente subido
-                echo "Corrupción de archivo";
-            break;
-            case 4: //No se subio el fichero
-                echo "No se envió archivo de imagen";
-            break;
-        }
-
-    }else{
-        if ((isset($_FILES['imagen']['name'])&&($_FILES['imagen']['error']==UPLOAD_ERR_OK))){
-
-            $destino_de_ruta ="../../ps-contenido/img/alumnos/";
-
-            move_uploaded_file($_FILES['imagen']['tmp_name'],$destino_de_ruta . $_FILES['imagen']['name']);
-        }else{
-            echo "El archivo no se ha podido copiar a imagenes";
-        }
-    }
-
-
-    $myconsulta ="UPDATE usuarios SET img = '$imagen' WHERE usuarios.id = '$iduser'";
-
-    $resultado = mysqli_query($conexion, $myconsulta);
-
-    /* Cerramos conexion */
-
-    /*mysqli_close($conexion);*/
-
-    echo "<script>
-			alert('La imagen fue actualizada correctamente');
-			window.location= './';
-		</script>";
+    include_once "includes/check_img.php";
 }
 
 ?>
@@ -183,19 +140,19 @@ if (isset($_POST["btn_enviar"])) {
 
                 <div class="redes">
                     <label for="facebook" class="form_lb"><i class="fa-brands fa-facebook"></i> Facebook</label>
-                    <label type="text" name="facebook" id="facebook_no_move" class="form_lb_disabled">https://www.facebook.com/</label>
+                    <label type="text" name="facebook" id="facebook_no_move" class="form_lb_disabled">facebook.com/</label>
                     <input type="text" name="facebook" id="facebook" class="form_inp" placeholder="https://www.facebook.com/" value="<?php echo $row['fb'] ?>">
                 </div>
 
                 <div class="redes">
                     <label for="twt" class="form_lb"><i class="fa-brands fa-twitter"></i> Twitter</label>
-                    <label type="text" id="twt_no_move" class="form_lb_disabled">https://twitter.com/</label>
+                    <label type="text" id="twt_no_move" class="form_lb_disabled">twitter.com/</label>
                     <input type="text" name="twt" id="twt" class="form_inp" placeholder="https://twitter.com/" value="<?php echo $row['twt'] ?>">
                 </div>
 
                 <div class="redes">
                     <label for="insta" class="form_lb"><i class="fa-brands fa-instagram"></i> Instagram</label>
-                    <label type="text" id="insta_no_move" class="form_lb_disabled">https://www.instagram.com/</label>
+                    <label type="text" id="insta_no_move" class="form_lb_disabled">instagram.com/</label>
                     <input type="text" name="insta" id="insta" class="form_inp" placeholder="https://www.instagram.com/" value="<?php echo $row['inst'] ?>">
                 </div>
 

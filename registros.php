@@ -223,7 +223,8 @@ if (isset($_POST["registrar_mst"])) {
                 <a href="https://www.facebook.com/Josproxmx/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
                 <a href="https://josprox.com/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-seedling"></i></a>
                 <a href="https://github.com/josprox/Cetis-CWP" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
-                <a href="./social/"><i class="fa-solid fa-school" target="_blank" rel="noopener noreferrer"></i></a>
+                <a href="./" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-school"></i></a>
+                <a href="./social/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-users"></i></a>
             </div>
 
             <center>

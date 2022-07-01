@@ -57,8 +57,8 @@ if (isset($_POST["ingresar"])) {
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 </head>
 <body>
-	<a href="./social/" class="btn_social"><i class="fa-solid fa-users"></i></a>
-    <a href="https://github.com/josprox/Cetis-CWP" class="btn_github"><i class="fa-brands fa-github"></i></a>
+	<a href="./social/" class="btn_social" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-users"></i></a>
+    <a href="https://github.com/josprox/Cetis-CWP" class="btn_github" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
 	<img class="wave" src="ps-contenido/img/wave.png">
 	<div class="container">
 		<div class="img">
@@ -87,10 +87,10 @@ if (isset($_POST["ingresar"])) {
             	   </div>
             	</div>
             	<a href="registros">No estás registrado? Registrate aquí</a>
-            	<a href="correo">Has olvidado tú contraseña? Has clic aquí</a>
+            	<a href="reset">Has olvidado tú contraseña? Has clic aquí</a>
             	<a href="https://panel.josprox.ovh">¿Eres de servicio escolar? has clic aquí</a>
-            	<input name="ingresar" type="submit" class="btn" value="Iniciar sesión">
-				<button onclick="location.href='./'" class="btn">Ir a la sección de alumnos</button>
+            	<input name="ingresar" type="submit" class="btn_redirect" value="Iniciar sesión">
+				<a href="./" class="btn_redirect">Soy alumno(a)</a>
             </form>
         </div>
     </div>

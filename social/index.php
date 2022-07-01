@@ -47,7 +47,7 @@ if (isset($_POST["ingresar"])) {
 
  ?>
 
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es-MX">
 <head>
 	<title>Cristal | Iniciar sesión</title>
@@ -59,7 +59,8 @@ if (isset($_POST["ingresar"])) {
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/4a5e39d1d1.js" crossorigin="anonymous"></script>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
 <!--===============================================================================================-->
@@ -89,8 +90,16 @@ if (isset($_POST["ingresar"])) {
   <link rel="apple-touch-icon" href="./images/logo.png">
   <link rel="apple-touch-startup-image" href="./images/logo.png">
   <link rel="manifest" href="./manifest.json">
+
+  <!-- Progresive web -->
+	
+  <link rel="stylesheet" href="../ps-contenido/scss/boton_social.css">
+	
 </head>
 <body>
+
+	<a href="../" class="btn_social" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-school"></i></a>
+    <a href="https://github.com/josprox/Cetis-CWP" class="btn_github" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
 	
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
@@ -127,7 +136,7 @@ if (isset($_POST["ingresar"])) {
 					</div>
 
 					<div class="text-center p-t-90">
-						<a class="txt1" href="../correo.php">
+						<a class="txt1" href="../reset">
 							¿Olvidaste tu contraseña? da clic aquí
 						</a>
 					</div>

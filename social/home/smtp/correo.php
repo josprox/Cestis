@@ -12,6 +12,10 @@ require 'phpmail/PHPMailer.php';
 require 'phpmail/SMTP.php';
 // Load Domain Generated Class
 require 'dominio.php';
+// Load .env
+require __DIR__ . './../../../vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__, './../../../.env');
+$dotenv->load();
 
 //Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer(true);
@@ -408,3 +412,33 @@ $cuerpohtml='
   </html>
 ';
 
+try {
+    //Server settings
+    $mail->SMTPDebug = 0;                      //Enable verbose debug output
+    $mail->isSMTP();                                            //Send using SMTP
+    $mail->Host       = $_ENV['smtp_server'];                     //Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+    $mail->Username   = $_ENV['smtp_username'];                     //SMTP username
+    $mail->Password   = $_ENV['smtp_password'];                               //SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+    $mail->Port       = $_ENV['smtp_port'];                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+
+    //Recipients
+    $mail->setFrom( $_ENV['smtp_username'], $minombre);
+    $mail->addAddress($correo);     //Add a recipient
+
+    //Content
+    $mail->isHTML(true);                                  //Set email format to HTML
+    $mail->Subject = 'Alguien te quiere conocer, desde Cristal';
+    $mail-> CharSet = 'UTF-8';
+    $mail->Body    = $cuerpohtml;
+
+    $mail->send();
+    echo "<script>
+    alert('¡Solicitud enviada! espera su respuesta en tu correo.😁');
+    window.location= '../';
+</script>";
+} catch (Exception $e) {
+    echo "Tuvimos un error, pruebalo mas tarde: {$mail->ErrorInfo}";
+}
+?>

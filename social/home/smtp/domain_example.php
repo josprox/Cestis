@@ -1,5 +1,0 @@
-<?php
-
-$dominio = "example.com";
-
-?>

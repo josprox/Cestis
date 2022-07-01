@@ -6,8 +6,8 @@
     "theme_color": "#7deb6c",
     "orientation": "portrait",
     "display": "standalone",
-    "start_url": "./app/allinone?utm_source=web_app_manifest",
-    "scope": "./app/allinone",
+    "start_url": "./allinone?utm_source=web_app_manifest",
+    "scope": "./allinone",
     "lang": "es-MX",
     "icons": [
       {

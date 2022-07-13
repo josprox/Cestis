@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-07-2022 a las 01:07:39
+-- Tiempo de generación: 14-07-2022 a las 01:36:54
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -334,7 +334,9 @@ INSERT INTO `notifications` (`id`, `tipo`, `Contenido`, `created_at`, `updated_a
 (35, 'Peligro', 'Si acabas de actualizar a la versión 6.9 y sigues ocupando la carpeta /admin/ dentro de Cetis CWP, se recomienda eliminarlo e instalar el nuevo complemento llamado Laravel CCWP. Si acabas de instalar la versión 6.9, no tendrás de qué preocuparte.', '2022-06-29 04:56:10', '2022-06-29 04:56:10'),
 (36, 'Información', 'Si deseas instalar la versión para administración, podrás instalarlo desde su <a class=\"text-white\" href=\"https://github.com/josprox/Laravel-CCWP\"> repositiorio, da clic aquí o busca Laravel CCWP</a>, recuerda que ya no es obligatorio la instalación del CRUD para administración desde Cetis CWP 6.8.', '2022-06-29 04:59:24', '2022-06-29 05:00:44'),
 (37, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 7.0', '2022-07-02 01:03:07', '2022-07-02 01:03:07'),
-(38, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 7.0 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V7\" class=\"text-white\">Clic aquí.</a>', '2022-07-02 01:03:28', '2022-07-02 01:03:28');
+(38, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 7.0 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V7\" class=\"text-white\">Clic aquí.</a>', '2022-07-02 01:03:28', '2022-07-02 01:03:28'),
+(39, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 7.2', '2022-07-13 23:16:10', '2022-07-13 23:16:10'),
+(40, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 7.2 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V7.2\" class=\"text-white\">Clic aquí.</a>', '2022-07-13 23:16:34', '2022-07-13 23:16:34');
 
 -- --------------------------------------------------------
 
@@ -567,7 +569,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'José Luis Melchor Estrada', 'joss@int.josprox.com', NULL, '$2y$10$1L1ZmE6gTQ1NYlCwb4GQBesiM0g1Quyzg3lOSMmdEdxCfcAJFVUyW', 'uNiCt2Q7ygRRRcX7tCN7cudyNYVAmSW8kxGW3M5oXG5Vk3vMQJuIhAiTq1za', '2022-04-15 05:12:26', '2022-04-15 05:12:26');
+(1, 'José Luis Melchor Estrada', 'joss@int.josprox.com', NULL, '$2y$10$1L1ZmE6gTQ1NYlCwb4GQBesiM0g1Quyzg3lOSMmdEdxCfcAJFVUyW', 'QI1t2bS8UVsZvyGm2zwphys8NxNJO5CrtOJBsvUoIOtZtJtcCaPgrMTdhwcJ', '2022-04-15 05:12:26', '2022-04-15 05:12:26');
 
 -- --------------------------------------------------------
 
@@ -813,7 +815,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de la tabla `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT de la tabla `numcontrols`

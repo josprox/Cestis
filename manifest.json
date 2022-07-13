@@ -1,13 +1,13 @@
 {
-    "name": "Cetis Control Web Panel",
-    "short_name": "CetisCWP",
+    "name": "Cetrix Systems",
+    "short_name": "Cetrix",
     "description": "Se bienvenido al panel de Alumnos, generado para que los alumnos puedan convivir con sus maestros de una manera muy segura.",
     "background_color": "#fff",
     "theme_color": "#7deb6c",
     "orientation": "portrait",
     "display": "standalone",
-    "start_url": "./allinone?utm_source=web_app_manifest",
-    "scope": "./allinone",
+    "start_url": "./app/?utm_source=web_app_manifest",
+    "scope": "./app/",
     "lang": "es-MX",
     "icons": [
       {

@@ -12,10 +12,27 @@
 
  <?php 
 
-include "./ps-conexion/conexion.php";
+include "./../ps-conexion/conexion.php";
+
+/* establecer el limitador de caché a 'private' */
+
+session_cache_limiter('private');
+$cache_limiter = session_cache_limiter();
+
+/* establecer la caducidad de la caché a 3 meses */
+session_cache_expire(131490);
+$cache_expire = session_cache_expire();
+
+
+/* iniciar la sesión */
+
 session_start();
+
+echo "<script>console.log('El limitador de caché ahora está establecido a: ".$cache_limiter."');</script>";
+echo "<script>console.log('Las páginas de sesión examinadas caducan después de ".$cache_expire." minutos.');</script>";
+
 if (isset($_SESSION['id_usuario'])) {
-    header("Location: ./panel");
+    header("Location: ./datos/");
 }
 //Login
 //if (!empty($_POST)) {
@@ -31,7 +48,7 @@ if (isset($_POST["ingresar"])) {
 
         if(password_verify($password,$password_encriptada) == TRUE){
           $_SESSION['id_usuario'] = $row['id'];
-          header("Location: panel");
+          header("Location: ./datos/");
         }else{
           echo "<script>
           alert('Contraseña incorrecta, vuélvelo a intentar o cambia la contraseña. Error CCWP-232_allinone');
@@ -73,8 +90,8 @@ if ($control > 0){
     </script>";
   }else{
     //Insertar info
-    $sqlusuario = "INSERT INTO usuarios (usuario, password, correo, img, num_control, nombre, discapacidad) 
-    VALUES ('$usuario', '$password_encriptada', '$correo','main.webp', '$num_control', '$nombre', '$discapacidad')";
+    $sqlusuario = "INSERT INTO usuarios (usuario, password, correo, img, num_control, nombre, discapacidad, created_at) 
+    VALUES ('$usuario', '$password_encriptada', '$correo','main.webp', '$num_control', '$nombre', '$discapacidad', '$fecha')";
     $resultadousuario = $conexion->query($sqlusuario);
   }
 }else{
@@ -138,14 +155,43 @@ if ($filas1 > 1) {
   <meta charset="UTF-8">
   <title>Cetis CWP App</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900'>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'>
-<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'><link rel="stylesheet" href="./app/style.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="./style.css">
+  <!-- Metas -->
+  <link rel="shortcut icon" href="./../ps-contenido/app img/default.png" type="image/x-icon">
+  <meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1' >
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Se bienvenido al panel de Alumnos, generado para que los alumnos puedan convivir con sus maestros de una manera muy segura.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <script src="https://kit.fontawesome.com/4a5e39d1d1.js" crossorigin="anonymous"></script>
 
-<?php include "./ps-includes/metas.php"; ?>
+  <!-- Barra del navegador -->
+  <meta name="theme-color" content="#7deb6c">
+  <!-- Optimizado para moviles -->
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <!-- Meta etiquetas par apple -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Iconos importantes -->
+  <link rel="apple-touch-icon" href="./../ps-contenido/app img/profile.png">
+  <link rel="apple-touch-startup-image" href="./../ps-contenido/app img/cover.png">
+  <!-- Archivo de manifiesto app -->
+  <link rel="manifest" href="./../manifest.json">
+
+  <?php
+
+  header("Content-Type: text/html;charset=utf-8");
+
+  ?>
 
 </head>
 <body>
+
 <!-- partial:index.partial.html -->
 <div class="container">
   <div class="info">
@@ -240,7 +286,7 @@ if ($filas1 > 1) {
 </div>
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script  src="./app/script.js"></script>
+  <script  src="./script.js"></script>
 
 </body>
 </html>

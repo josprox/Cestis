@@ -13,4 +13,13 @@ function connect(){
         exit();
     }
 
+    require __DIR__ . '/../vendor/autoload.php';
+
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__, '../.env');
+    $dotenv->load();
+
+    //Cambio de configuración horaria
+    date_default_timezone_set($_ENV['ZONA_HORARIA']);
+    $fecha = date("Y-m-d H:i:s");
+
 ?> 

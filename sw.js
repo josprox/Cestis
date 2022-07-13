@@ -1,6 +1,6 @@
 ;
 //asignar un nombre y versión al cache
-const CACHE_NAME = 'v2_Cetis_CWP',
+const CACHE_NAME = 'v8_Cetis_CWP',
   urlsToCache = [
     './',
     './ps-contenido/css/facilito-fx.min.css',
@@ -10,6 +10,8 @@ const CACHE_NAME = 'v2_Cetis_CWP',
     './app/script.js',
     './ps-contenido/app img/default.png',
     './ps-contenido/img/logo.webp',
+    './app/datos/scss/cetrix.ios.css',
+    './app/datos/js/botones.js',
     './ps-contenido/img/alumnos/main.webp'
   ]
 

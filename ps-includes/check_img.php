@@ -1,6 +1,6 @@
 <?php
 
-$imagen = $_FILES['imagen']['name'];
+    $imagen = $_FILES['imagen']['name'];
 
     if($_FILES['imagen']['error']){
 
@@ -32,13 +32,13 @@ $imagen = $_FILES['imagen']['name'];
         }
     }
 
-$img_datos = "SELECT img FROM usuarios WHERE id = '$iduser'";
+    $img_datos = "SELECT img FROM usuarios WHERE id = '$iduser'";
 
-$consulta_img = $conexion->query($img_datos);
+    $consulta_img = $conexion->query($img_datos);
 
-$info_img = $consulta_img->fetch_assoc();
+    $info_img = $consulta_img->fetch_assoc();
 
-$img_actual = $info_img['img'];
+    $img_actual = $info_img['img'];
 
 if ($img_actual == "main.webp") {
     

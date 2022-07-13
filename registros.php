@@ -48,8 +48,8 @@ if (isset($_POST["registrar_user"])) {
             </script>";
             }else{
             //Insertar info
-            $sqlusuario = "INSERT INTO usuarios (usuario, password, correo, img, num_control, nombre, discapacidad) 
-            VALUES ('$usuario', '$password_encriptada', '$correo','main.webp', '$num_control', '$nombre', '$discapacidad')";
+            $sqlusuario = "INSERT INTO usuarios (usuario, password, correo, img, num_control, nombre, discapacidad, created_at) 
+            VALUES ('$usuario', '$password_encriptada', '$correo','main.webp', '$num_control', '$nombre', '$discapacidad', '$fecha')";
             $resultadousuario = $conexion->query($sqlusuario);
             }
         }else{
@@ -136,8 +136,8 @@ if (isset($_POST["registrar_mst"])) {
             </script>";
         }else{
             //Insertar info
-            $sqlusuario = "INSERT INTO maestros (usuario, password, correo, img, nombre, discapacidad) 
-            VALUES ('$usuario', '$password_encriptada', '$correo','main.webp', '$nombre', '$discapacidad')";
+            $sqlusuario = "INSERT INTO maestros (usuario, password, correo, img, nombre, discapacidad, created_at)
+            VALUES ('$usuario', '$password_encriptada', '$correo','main.webp', '$nombre', '$discapacidad', '$fecha')";
             $resultadousuario = $conexion->query($sqlusuario);
         }
     

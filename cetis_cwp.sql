@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-07-2022 a las 22:04:25
+-- Tiempo de generación: 14-07-2022 a las 01:07:39
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -510,6 +510,23 @@ INSERT INTO `social` (`id`, `id_usuario`, `info_datos`, `fb`, `twt`, `inst`, `cr
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `tickets`
+--
+
+CREATE TABLE `tickets` (
+  `id` bigint(11) NOT NULL,
+  `Usuario` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Nombre` varchar(70) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `num_control` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Motivo` varchar(180) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Mensaje` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `turnos`
 --
 
@@ -576,11 +593,11 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `usuario`, `password`, `correo`, `img`, `num_control`, `nombre`, `discapacidad`, `created_at`, `updated_at`) VALUES
-(31, 'josprox', '$2y$10$xkxiPg4AtAmqMP9KLApVUehE3f3fmhMwl.84j6.uK1UDfoBJkjfzS', 'joss@int.josprox.com', 'jossestrada.webp', '19309060540339', 'Melchor Estrada José Luis', 'Ninguna', NULL, '2022-04-24 05:56:50'),
+(31, 'josprox', '$2y$10$biASx9cxSqEO7kGpnsENAOHCZf5XK8XOOhh0Qfe0hCxXPwSFEyKBK', 'joss@int.josprox.com', 'jossestrada.jpg', '19309060540339', 'Melchor Estrada José Luis', 'Ninguna', NULL, '2022-04-24 05:56:50'),
 (33, 'Alextremo', '$2y$10$YwWGC1k0r9VmJVi.sJAWJe8DizBP4CN9s7R/Z0O/9IrS0/eccpHt2', 'Rpramiro18@gmail.com', 'main.webp', '19309060540379', 'Paz García Alejandro', 'Ninguna', NULL, '2022-04-22 05:35:44'),
 (34, 'xime04', '$2y$10$zZPYHTTOU82ESeML82YuR.22QGByP4HRFK1FV5hkGSlERgSktifZ2', 'anemixsanchez3@gmail.com', 'main.webp', '19309060540247', 'Aranda Sánchez Ximena', 'Ninguna', NULL, '2022-04-14 01:58:50'),
 (36, 'Isra Lara', '$2y$10$Iopw2eHcwFyWoUBmEp.xUeZEHHV7MuHqjtpbBauAH5sYIiWxvQSC.', 'isra.lara04@gmail.com', 'isra.webp', '19309060540318', 'Lara Prieto Jefte Israel', 'Ninguna', NULL, '2022-04-24 05:57:01'),
-(38, 'eriicksanchez_', '$2y$10$y9qPGhcUSfcfDz0FBAE6Q.Wwy64rC0BUKVA9cVlOypy8pjSEHXatG', 'ericksanchez.100504@gmail.com', 'erick.webp', '19309060540234', 'Alvirde Sánchez Erick', 'Ninguna', NULL, '2022-04-24 05:57:14');
+(38, 'eriicksanchez_', '$2y$10$pStuMqr3APuHYgLsu22bguYoKwSJTDz8YQCXTrWybDkxD.idNUlbO', 'ericksanchez.100504@gmail.com', 'erick.webp', '19309060540234', 'Alvirde Sánchez Erick', 'Ninguna', NULL, '2022-04-24 05:57:14');
 
 --
 -- Índices para tablas volcadas
@@ -695,6 +712,12 @@ ALTER TABLE `sexo`
 -- Indices de la tabla `social`
 --
 ALTER TABLE `social`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `tickets`
+--
+ALTER TABLE `tickets`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -821,6 +844,12 @@ ALTER TABLE `sexo`
 --
 ALTER TABLE `social`
   MODIFY `id` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de la tabla `tickets`
+--
+ALTER TABLE `tickets`
+  MODIFY `id` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `turnos`

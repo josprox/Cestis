@@ -370,7 +370,7 @@ $cuerpohtml='
                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                       <tr>
                         <td style="text-align: left; padding-left: 5px; padding-right: 5px;">
-                          <h3 class="heading">Formas de contacto contacto</h3>
+                          <h3 class="heading">Formas de contacto</h3>
                           <ul>
                             <li><span class="text">'.$micorreo.'</span></li>
                             <li><a href="https://www.facebook.com/'.$fb.'"><span class="text">Facebook: @'.$fb.'</span></a></li>
@@ -432,6 +432,13 @@ try {
     $mail->Subject = 'Alguien te quiere conocer, desde Cristal';
     $mail-> CharSet = 'UTF-8';
     $mail->Body    = $cuerpohtml;
+
+    $mail->SMTPAutoTLS = false;
+    $mail->SMTPOptions = array(
+        'ssl' => array(
+          'crypto_method' => STREAM_CRYPTO_METHOD_TLSv1_3_CLIENT
+        )
+    );
 
     $mail->send();
     echo "<script>

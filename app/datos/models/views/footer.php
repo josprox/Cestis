@@ -18,4 +18,3 @@
     <script src="./js/botones.js"></script>
 
     <script src="./fontawesome/js/all.min.js"></script>
-<?php mysqli_close($conexion); ?>

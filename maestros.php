@@ -55,6 +55,9 @@ if (isset($_POST["ingresar"])) {
 	<link rel="stylesheet" type="text/css" href="ps-contenido/css/logins.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<script src="./node_modules/sweetalert2/dist/sweetalert2.all.js"></script>
+	<link rel="stylesheet" href="./node_modules/sweetalert2/dist/sweetalert2.min.css">
+	<script src="./node_modules/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
 	<a href="./social/" class="btn_social" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-users"></i></a>
@@ -95,7 +98,6 @@ if (isset($_POST["ingresar"])) {
         </div>
     </div>
     <script type="text/javascript" src="ps-contenido/js/logins.js"></script>
-	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script src="ps-contenido/js/sweetalert.js"></script>
 	<script src="./service.js"></script>
 </body>

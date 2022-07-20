@@ -49,3 +49,18 @@ $RECYCLE.BIN/
 
 # Evitar archivos .env
 .env
+
+# Evitar la integración de archivos node_modules innercías de la carpeta de proyecto.
+/node_modules/jquery/external/
+/node_modules/jquery/src/
+/node_modules/jquery/AUTHORS.txt
+/node_modules/jquery/bower.json
+/node_modules/jquery/LICENSE.txt
+/node_modules/jquery/README.md
+/node_modules/sweetalert2/src/
+/node_modules/sweetalert2/LICENSE
+/node_modules/sweetalert2/README.md
+/node_modules/sweetalert2/sweetalert2.d.ts
+
+# evitar package json
+*.json

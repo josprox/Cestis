@@ -21,31 +21,31 @@ if (isset($_SESSION['id_usuario'])) {
 }
 //Login
 //if (!empty($_POST)) {
-if (isset($_POST["ingresar"])) {
-    $usuario = mysqli_real_escape_string($conexion, $_POST['user']);
-    $password = mysqli_real_escape_string($conexion, $_POST['pass']);
-    $sql = "SELECT id, password FROM usuarios WHERE usuario = '$usuario'";
-    $resultado = $conexion->query($sql);
-    $rows = $resultado->num_rows;
-    if ($rows > 0) {
-        $row = $resultado->fetch_assoc();
-		$password_encriptada = $row['password'];
-		if(password_verify($password,$password_encriptada) == TRUE){
-			$_SESSION['id_usuario'] = $row['id'];
-			header("Location: panel");
-		}else{
+	if (isset($_POST["ingresar"])) {
+		$usuario = mysqli_real_escape_string($conexion, $_POST['user']);
+		$password = mysqli_real_escape_string($conexion, $_POST['pass']);
+		$sql = "SELECT id, password FROM usuarios WHERE usuario = '$usuario'";
+		$resultado = $conexion->query($sql);
+		$rows = $resultado->num_rows;
+		if ($rows > 0) {
+			$row = $resultado->fetch_assoc();
+			$password_encriptada = $row['password'];
+			if(password_verify($password,$password_encriptada) == TRUE){
+				$_SESSION['id_usuario'] = $row['id'];
+				header("Location: panel");
+			}else{
+				echo "<script>
+				alert('Contraseña incorrecta, vuélvelo a intentar o cambia la contraseña. Error CCWP-232_alm_login');
+				window.location= './';
+			  </script>";
+			  }
+		} else {
 			echo "<script>
-			alert('Contraseña incorrecta, vuélvelo a intentar o cambia la contraseña. Error CCWP-232_alm_login');
-			window.location= './';
-		  </script>";
-		  }
-    } else {
-        echo "<script>
-			alert('Ninguno de los dos datos existen. Error CCWP-220_alm_login');
-			window.location= './';
-		</script>";
-    }
-}
+				alert('Ninguno de los dos datos existen. Error CCWP-220_alm_login');
+				window.location= './';
+			</script>";
+		}
+	}
 
 ?>
 
@@ -57,6 +57,9 @@ if (isset($_POST["ingresar"])) {
 	<link rel="stylesheet" type="text/css" href="ps-contenido/css/logins.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<script src="./node_modules/sweetalert2/dist/sweetalert2.all.js"></script>
+	<link rel="stylesheet" href="./node_modules/sweetalert2/dist/sweetalert2.min.css">
+	<script src="./node_modules/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
 	<a href="./social/" class="btn_social" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-users"></i></a>
@@ -97,7 +100,6 @@ if (isset($_POST["ingresar"])) {
         </div>
     </div>
     <script type="text/javascript" src="ps-contenido/js/logins.js"></script>
-	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script src="ps-contenido/js/sweetalert.js"></script>
 	<script src="./service.js"></script>
 </body>

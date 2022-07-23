@@ -3,17 +3,20 @@
 
 ## Misión
 
-¿Estás buscando un sistema de control para alumnos? este proyecto es el que necesitas pues, los profesores podrán enviar notificaciones a los alumnos si tienen alguna tarea, sino podrá asistir, etc. Pero lo más importante, podrás decidir quién puede registrarse, el sistema se maneja con "Números de Control", solo con aquellos números podrán registrarse.
+¿Estás buscando un sistema de control para alumnos? este proyecto es el que necesitas pues, los profesores podrán enviar notificaciones a los alumnos si tienen alguna tarea, sino podrá asistir, etc. Pero lo más importante, podrás decidir quién puede registrarse, el sistema se maneja con "Números de Control" y, solo con aquellos números podrán registrarse.
+
+Este sistema está programado en PHP.
+
+### Plugin Laravel CCWP (Cetis Control Web Panel)
 
 El usuario "admin", podrá interactuar con la información de los maestros y sus publicaciones, podría agregar números de control, corregir la información tanto del alumno cómo del maestro, crear anuncios hacia los maestros y muchas más cosas.
 
-Este sistema está programado en PHP.
 
 ## Cetis CWP ocupa los siguientes frameworks para existir:
 
 - Facilito F(x) sites creado por JOSPROX MX | Internacional: Este framework dá la estructura para el panel del alumno y maestro (back-end), conectado hacia la base de datos y leyendo cada tabla necesaria para mostrarle información tanto al alumno (usuario) cómo al maestro.
 
-- Laravel con livewire: Le permite al administrador poder crear, leer, actualizar o eliminar datos de las tablas que aporta la base de datos (CRUD), podrás descargarlo como un plugin <a href="https://github.com/josprox/Laravel-CCWP">dando clic aquí</a> y configurandolo. Se recomienda tener conocimientos con este framework.
+- Laravel con livewire: Le permite al administrador poder crear, leer, actualizar o eliminar datos de las tablas que aporta la base de datos (CRUD), podrás descargarlo como un plugin <a href="https://github.com/josprox/Laravel-CCWP">dando clic aquí</a> y configurándolo. Se recomienda tener conocimientos con este framework.
 
 ## El diseño de Cetis CWP está basado en:
 
@@ -71,7 +74,7 @@ Para poder llevar a cabo una instalación sencilla, <a href="https://github.com/
 
 Si trabajas en un servidor:
 
-- Descomprime el archivo zip, se descomprimirá la carpeta /installer/, accede a ella y copia o corta los dos archivos a tu raiz. Una vez hecho esto podrás eliminar la carpeta /installer/ y el zip installer.zip, dejando solo el zip de la versión descargada y el archivo installer.php.
+- Descomprime el archivo zip, se descomprimirá un archivo php el cuál es el instalador, también tendrás un archivo zip con los archivos necesarios para instalar cetis CWP.
 
 - Crea una base de datos, de preferencia usa un cortejo utf8mb4_unicode_ci.
 
@@ -79,15 +82,15 @@ Si trabajas en un servidor:
 
 - Sigue las instrucciones para llevar a cabo la instalación, recuerda completar todos los campos y cumplir con los requisitos mínimos.
 
-- Una vez instalado te saldrá el siguiente mensaje 'Se ha insertado los datos de manera correcta.' y te redireccionará a tu dominio con la versión de cetis CWP instalado.
+- Una vez instalado te saldrá el siguiente mensaje 'Se ha insertado los datos de manera correcta.' y te redireccionará a tu dominio con la versión de Cetis CWP instalado.
 
 Si trabajas en un localhost (usando de ejemplo xampp):
 
-- Descarga el archivo comprimido y guardalo en una raíz de documentos de tú servidor. Si ocupas XAMPP puede ser: C:\xampp\htdocs\
+- Descarga el archivo comprimido y guárdalo en una raíz de documentos de tú servidor. Si ocupas XAMPP puede ser: C:\xampp\htdocs\
 
 - Ahora creamos una carpeta llamada Cetis CWP (esto es un ejemplo, puedes llamarlo cómo gustes): C:\xampp\htdocs\cetis-cwp\
 
-- Descomprime el archivo zip dentro de la carpeta antes creada, se descomprimirá la carpeta /installer/, accede a ella y copia o corta los dos archivos a tu raiz. Una vez hecho esto podrás eliminar la carpeta /installer/ y el zip installer.zip, dejando solo el zip de la versión descargada y el archivo installer.php.
+- Descomprime el archivo zip, se descomprimirá un archivo php el cuál es el instalador, también tendrás un archivo zip con los archivos necesarios para instalar cetis CWP.
 
 - Crea una base de datos, de preferencia usa un cortejo utf8mb4_unicode_ci.
 
@@ -99,7 +102,7 @@ Si trabajas en un localhost (usando de ejemplo xampp):
 
 #### Instalación para versiones anteriores a "TIMELINET versión 6.3.3"
 
-Descarga el archivo comprimido y guardalo en una raíz de documentos de tú servidor. Si ocupas XAMPP puede ser:
+Descarga el archivo comprimido y guárdalo en una raíz de documentos de tú servidor. Si ocupas XAMPP puede ser:
 C:\xampp\htdocs\
 Donde creamos una carpeta llamada Cetis CWP:
 C:\xampp\htdocs\cetis cwp\
@@ -122,7 +125,7 @@ Listo, desde ahora podrás correr de una manera segura Cetis CWP.
 
 - Se recomienda usar un panel de control para administrar el servidor, puede usar sin problemas Cpanel y Hestia Control Panel. De preferencia debería usar <a href="https://hestiacp.com/">Hestia Control Panel</a>.
 
-- En caso de pruebas y mejoras, se recomienda usar XAMPP con php 8.1.0 o superior, debiado a que, fué programado con esa versión.
+- En caso de pruebas y mejoras, se recomienda usar XAMPP con php 8.1.0 o superior, debido a que, fue programado con esa versión.
 
 - Para tener un buen funcionamiento, se recomienda que una vez subidos los archivos, ponle los todos los permisos de leer, escribir y ejecutar (permiso 777).
 
@@ -130,8 +133,6 @@ Listo, desde ahora podrás correr de una manera segura Cetis CWP.
 
 Un programa creado por JOSPROX MX/ JOSPROX Internacional.
 Licencia: Creative Commons (Atribución-NoComercial 4.0 Internacional - Compartir igual).
-
-EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA, INCLUYENDO, PERO NO LIMITADO A, LAS GARANTÍAS DE COMERCIABILIDAD, APTITUD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO LOS AUTORES O TITULARES DE LOS DERECHOS DE AUTOR SERÁN RESPONSABLES DE CUALQUIER RECLAMO, DAÑOS U OTRA RESPONSABILIDAD, YA SEA EN UNA ACCIÓN DE CONTRATO, AGRAVIO O DE OTRO MODO, QUE SURJA DE, FUERA DE O EN RELACIÓN CON EL SOFTWARE O EL USO U OTRAS NEGOCIACIONES EN EL SOFTWARE.
 
 <img src="./ps-contenido/img data/byncsa.jpg" alt="Atribución-NoComercial 4.0 Internacional - Compartir igual"/>
 

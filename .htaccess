@@ -1,6 +1,7 @@
 <IfModule mod_rewrite.c>
 Options +FollowSymLinks
 RewriteEngine on
+AddDefaultCharset utf-8
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.php -f
@@ -13,6 +14,7 @@ RewriteRule ^sitemap-mx\.xml$ sitemap-mx\.php [L]
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html
+RewriteRule ^sitemap\.xml$ sitemap\.php [L]
 #RewriteRule ^([a-z]+)/?$ $1.html [NC]
 
 </IfModule>
@@ -79,3 +81,8 @@ RewriteRule ^(.*)$ $1.html
 	ExpiresByType application/vnd.ms-excel A2419200
 	ExpiresByType application/zip A2419200
 </IfModule>
+
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>

@@ -1,4 +1,4 @@
-#### Licencia.
+# Licencia.
 
 Un programa creado por JOSPROX MX/ JOSPROX Internacional.
 Licencia: Creative Commons (Atribución-NoComercial 4.0 Internacional - Compartir igual).

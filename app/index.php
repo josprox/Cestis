@@ -52,13 +52,13 @@ if (isset($_POST["ingresar"])) {
         }else{
           echo "<script>
           alert('Contraseña incorrecta, vuélvelo a intentar o cambia la contraseña. Error CCWP-232_allinone');
-          window.location= './allinone';
+          window.location= './';
           </script>";
         }
     } else {
         echo "<script>
           alert('Ninguno de los dos datos existen. Error CCWP-220_allinone');
-          window.location= './allinone';
+          window.location= './';
         </script>";
     }
 }

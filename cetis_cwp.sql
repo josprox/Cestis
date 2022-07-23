@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-07-2022 a las 01:36:54
+-- Tiempo de generación: 24-07-2022 a las 01:32:18
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -336,7 +336,9 @@ INSERT INTO `notifications` (`id`, `tipo`, `Contenido`, `created_at`, `updated_a
 (37, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 7.0', '2022-07-02 01:03:07', '2022-07-02 01:03:07'),
 (38, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 7.0 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V7\" class=\"text-white\">Clic aquí.</a>', '2022-07-02 01:03:28', '2022-07-02 01:03:28'),
 (39, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 7.2', '2022-07-13 23:16:10', '2022-07-13 23:16:10'),
-(40, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 7.2 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V7.2\" class=\"text-white\">Clic aquí.</a>', '2022-07-13 23:16:34', '2022-07-13 23:16:34');
+(40, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 7.2 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V7.2\" class=\"text-white\">Clic aquí.</a>', '2022-07-13 23:16:34', '2022-07-13 23:16:34'),
+(41, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 7.2.3_alpha', '2022-07-23 23:30:48', '2022-07-23 23:30:48'),
+(42, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 7.2.3_alpha ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V7.2.3_alpha\" class=\"text-white\">Clic aquí.</a>', '2022-07-23 23:31:27', '2022-07-23 23:31:27');
 
 -- --------------------------------------------------------
 
@@ -595,7 +597,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `usuario`, `password`, `correo`, `img`, `num_control`, `nombre`, `discapacidad`, `created_at`, `updated_at`) VALUES
-(31, 'josprox', '$2y$10$biASx9cxSqEO7kGpnsENAOHCZf5XK8XOOhh0Qfe0hCxXPwSFEyKBK', 'joss@int.josprox.com', 'jossestrada.jpg', '19309060540339', 'Melchor Estrada José Luis', 'Ninguna', NULL, '2022-04-24 05:56:50'),
+(31, 'josprox', '$2y$10$biASx9cxSqEO7kGpnsENAOHCZf5XK8XOOhh0Qfe0hCxXPwSFEyKBK', 'pinguin69eyes@gmail.com', 'jossestrada.jpg', '19309060540339', 'Melchor Estrada José Luis', 'Ninguna', NULL, '2022-04-24 05:56:50'),
 (33, 'Alextremo', '$2y$10$YwWGC1k0r9VmJVi.sJAWJe8DizBP4CN9s7R/Z0O/9IrS0/eccpHt2', 'Rpramiro18@gmail.com', 'main.webp', '19309060540379', 'Paz García Alejandro', 'Ninguna', NULL, '2022-04-22 05:35:44'),
 (34, 'xime04', '$2y$10$zZPYHTTOU82ESeML82YuR.22QGByP4HRFK1FV5hkGSlERgSktifZ2', 'anemixsanchez3@gmail.com', 'main.webp', '19309060540247', 'Aranda Sánchez Ximena', 'Ninguna', NULL, '2022-04-14 01:58:50'),
 (36, 'Isra Lara', '$2y$10$Iopw2eHcwFyWoUBmEp.xUeZEHHV7MuHqjtpbBauAH5sYIiWxvQSC.', 'isra.lara04@gmail.com', 'isra.webp', '19309060540318', 'Lara Prieto Jefte Israel', 'Ninguna', NULL, '2022-04-24 05:57:01'),
@@ -815,7 +817,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de la tabla `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT de la tabla `numcontrols`

@@ -6,16 +6,12 @@ AddDefaultCharset utf-8
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^(.*)$ $1.php
-RewriteRule ^sitemap\.xml$ sitemap\.php [L]
-RewriteRule ^sitemap-mx\.xml$ sitemap-mx\.php [L]
 #RewriteRule ^([a-z]+)/?$ $1.php [NC]
 
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html
-RewriteRule ^sitemap\.xml$ sitemap\.php [L]
-#RewriteRule ^([a-z]+)/?$ $1.html [NC]
 
 </IfModule>
 

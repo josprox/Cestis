@@ -414,21 +414,21 @@ $cuerpohtml='
 
 try {
     //Server settings
-    $mail->SMTPDebug = 0;                      //Enable verbose debug output
-    $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = $_ENV['SMTP_SERVER'];                     //Set the SMTP server to send through
-    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = $_ENV['SMTP_USERNAME'];                     //SMTP username
-    $mail->Password   = $_ENV['SMTP_PASSWORD'];                               //SMTP password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-    $mail->Port       = $_ENV['SMTP_PORT'];                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+    $mail->SMTPDebug = 0;
+    $mail->isSMTP();
+    $mail->Host       = $_ENV['SMTP_SERVER'];
+    $mail->SMTPAuth   = true;
+    $mail->Username   = $_ENV['SMTP_USERNAME'];
+    $mail->Password   = $_ENV['SMTP_PASSWORD'];
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port       = $_ENV['SMTP_PORT'];
 
     //Recipients
     $mail->setFrom( $_ENV['SMTP_USERNAME'], $minombre);
-    $mail->addAddress($correo);     //Add a recipient
+    $mail->addAddress($correo);
 
     //Content
-    $mail->isHTML(true);                                  //Set email format to HTML
+    $mail->isHTML(true);
     $mail->Subject = 'Alguien te quiere conocer, desde Cristal';
     $mail-> CharSet = 'UTF-8';
     $mail->Body    = $cuerpohtml;

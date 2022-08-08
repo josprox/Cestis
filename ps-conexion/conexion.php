@@ -1,8 +1,8 @@
 <?php
 
-function connect(){
-    include "base_db.php";
-    return new mysqli("$host","$usuario", "$contra","$database");
+    function connect(){
+        include "base_db.php";
+        return new mysqli("$host","$usuario", "$contra","$database");
     }
     $conexion = connect();
     $conexion->set_charset("utf8");

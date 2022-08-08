@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-07-2022 a las 01:32:18
+-- Tiempo de generación: 08-08-2022 a las 02:37:05
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -327,18 +327,13 @@ CREATE TABLE `notifications` (
 --
 
 INSERT INTO `notifications` (`id`, `tipo`, `Contenido`, `created_at`, `updated_at`) VALUES
-(31, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 6.9', '2022-06-29 04:50:29', '2022-06-29 04:50:29'),
-(32, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 6.9 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V6.9\" class=\"text-white\">Clic aquí.</a>', '2022-06-29 04:50:47', '2022-06-29 04:50:47'),
-(33, 'Alerta primaria', 'El sistema se encuentra en la versión más estable de Cetis CWP.', '2022-06-29 04:51:33', '2022-06-29 04:51:33'),
-(34, 'Advertencia', 'Ya no se recomienda la instalación de Cetis CWP versión 6.5, pues se han encontrado varias vulnerabilidades.', '2022-06-29 04:54:05', '2022-06-29 04:54:05'),
-(35, 'Peligro', 'Si acabas de actualizar a la versión 6.9 y sigues ocupando la carpeta /admin/ dentro de Cetis CWP, se recomienda eliminarlo e instalar el nuevo complemento llamado Laravel CCWP. Si acabas de instalar la versión 6.9, no tendrás de qué preocuparte.', '2022-06-29 04:56:10', '2022-06-29 04:56:10'),
-(36, 'Información', 'Si deseas instalar la versión para administración, podrás instalarlo desde su <a class=\"text-white\" href=\"https://github.com/josprox/Laravel-CCWP\"> repositiorio, da clic aquí o busca Laravel CCWP</a>, recuerda que ya no es obligatorio la instalación del CRUD para administración desde Cetis CWP 6.8.', '2022-06-29 04:59:24', '2022-06-29 05:00:44'),
-(37, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 7.0', '2022-07-02 01:03:07', '2022-07-02 01:03:07'),
-(38, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 7.0 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V7\" class=\"text-white\">Clic aquí.</a>', '2022-07-02 01:03:28', '2022-07-02 01:03:28'),
 (39, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 7.2', '2022-07-13 23:16:10', '2022-07-13 23:16:10'),
 (40, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 7.2 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V7.2\" class=\"text-white\">Clic aquí.</a>', '2022-07-13 23:16:34', '2022-07-13 23:16:34'),
 (41, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 7.2.3_alpha', '2022-07-23 23:30:48', '2022-07-23 23:30:48'),
-(42, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 7.2.3_alpha ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V7.2.3_alpha\" class=\"text-white\">Clic aquí.</a>', '2022-07-23 23:31:27', '2022-07-23 23:31:27');
+(42, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 7.2.3_alpha ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V7.2.3_alpha\" class=\"text-white\">Clic aquí.</a>', '2022-07-23 23:31:27', '2022-07-23 23:31:27'),
+(43, 'Completado', 'Se ha actualizado el sistema a Cetis CWP 7.3', '2022-08-08 00:33:10', '2022-08-08 00:33:10'),
+(44, 'Alerta secundaria', 'La información de la versión Cetis CWP timelinet versión 7.3 ya se encuentra disponible. <a href=\"https://github.com/josprox/Cetis-CWP/releases/tag/V7.3\" class=\"text-white\">Clic aquí.</a>', '2022-08-08 00:33:35', '2022-08-08 00:33:35'),
+(45, 'Alerta primaria', 'Cetis CWP Versión 7.3 es la versión mas estable, gracias por su instalación.', '2022-08-08 00:34:37', '2022-08-08 00:34:37');
 
 -- --------------------------------------------------------
 
@@ -571,7 +566,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'José Luis Melchor Estrada', 'joss@int.josprox.com', NULL, '$2y$10$1L1ZmE6gTQ1NYlCwb4GQBesiM0g1Quyzg3lOSMmdEdxCfcAJFVUyW', 'QI1t2bS8UVsZvyGm2zwphys8NxNJO5CrtOJBsvUoIOtZtJtcCaPgrMTdhwcJ', '2022-04-15 05:12:26', '2022-04-15 05:12:26');
+(1, 'José Luis Melchor Estrada', 'joss@int.josprox.com', NULL, '$2y$10$1L1ZmE6gTQ1NYlCwb4GQBesiM0g1Quyzg3lOSMmdEdxCfcAJFVUyW', 'gFO5iTjCXKIhhf6MY4HrbhE3zG5TyplhQ3h24AhaOGsQ5nplLpp99dbO7y4k', '2022-04-15 05:12:26', '2022-04-15 05:12:26');
 
 -- --------------------------------------------------------
 
@@ -817,7 +812,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de la tabla `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT de la tabla `numcontrols`

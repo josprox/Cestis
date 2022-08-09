@@ -1,14 +1,6 @@
 <?php
 
 require "./../../../ps-conexion/conexion.php";
-/* establecer el limitador de caché a 'private' */
-
-session_cache_limiter('private');
-$cache_limiter = session_cache_limiter();
-
-/* establecer la caducidad de la caché a 3 meses */
-session_cache_expire(131490);
-$cache_expire = session_cache_expire();
 
 
 /* iniciar la sesión */

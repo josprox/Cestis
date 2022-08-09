@@ -14,7 +14,11 @@
 
 include "./../../ps-conexion/conexion.php";
 
+
+/* iniciar la sesión */
+
 session_start();
+
 if (!isset($_SESSION['id_usuario'])) {
     header("Location: ./../");
 }

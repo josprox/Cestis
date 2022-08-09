@@ -22,4 +22,8 @@
     date_default_timezone_set($_ENV['ZONA_HORARIA']);
     $fecha = date("Y-m-d H:i:s");
 
+    // Funcionando con la base de datos
+    echo "<script>console.log('El sistema se ha cargado correctamente');</script>";
+
+
 ?> 

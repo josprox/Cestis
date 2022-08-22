@@ -17,11 +17,47 @@ session_start();
 if (isset($_SESSION['id_maestro'])) {
     header("Location: work/");
 }
+
+//login por cookie
+if (isset($_COOKIE['COOKIE_INDEFINED_SESSION'])) {
+	if ($_COOKIE['COOKIE_INDEFINED_SESSION']) {
+		$nombre_user = $_COOKIE['COOKIE_DATA_INDEFINED_SESSION']['user'];
+		$password_user = $_COOKIE['COOKIE_DATA_INDEFINED_SESSION']['pass'];
+
+		$sql = "SELECT id, password FROM maestros WHERE usuario = '$nombre_user'";
+		$resultado = $conexion->query($sql);
+		$rows = $resultado->num_rows;
+		if ($rows > 0) {
+			$row = $resultado->fetch_assoc();
+			$password_encriptada = $row['password'];
+			if(password_verify($password_user,$password_encriptada) == TRUE){
+				$_SESSION['id_maestro'] = $row['id'];
+				header("Location: ./work/");
+			}else{
+				echo "<script>
+				alert('Contraseña incorrecta, vuélvelo a intentar o cambia la contraseña. Error CCWP-232_mst_login');
+				window.location= './maestros';
+			  </script>";
+			  }
+		} else {
+			echo "<script>
+				alert('Ninguno de los dos datos existen. Error CCWP-220_mst_login');
+				window.location= './maestros';
+			</script>";
+		}
+	}
+}
+
 //Login
-//if (!empty($_POST)) {
 if (isset($_POST["ingresar"])) {
     $usuario = mysqli_real_escape_string($conexion, $_POST['user']);
     $password = mysqli_real_escape_string($conexion, $_POST['pass']);
+
+	//Cookie de usuario y contraseña
+	setcookie("COOKIE_INDEFINED_SESSION", TRUE, time()+$_ENV['COOKIE_SESSION'], "/");
+	setcookie("COOKIE_DATA_INDEFINED_SESSION[user]", $usuario, time()+$_ENV['COOKIE_SESSION'], "/");
+	setcookie("COOKIE_DATA_INDEFINED_SESSION[pass]", $password, time()+$_ENV['COOKIE_SESSION'], "/");
+
     $sql = "SELECT id, password FROM maestros WHERE usuario = '$usuario'";
     $resultado = $conexion->query($sql);
     $rows = $resultado->num_rows;

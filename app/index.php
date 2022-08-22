@@ -36,7 +36,7 @@ if (isset($_COOKIE['COOKIE_INDEFINED_SESSION'])) {
 			$password_encriptada = $row['password'];
 			if(password_verify($password_user,$password_encriptada) == TRUE){
 				$_SESSION['id_usuario'] = $row['id'];
-				header("Location: panel");
+				header("Location: ./datos/");
 			}else{
 				echo "<script>
 				alert('Contraseña incorrecta, vuélvelo a intentar o cambia la contraseña. Error CCWP-232_alm_login');

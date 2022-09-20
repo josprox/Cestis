@@ -55,11 +55,7 @@ if (isset($_COOKIE['COOKIE_INDEFINED_SESSION'])) {
 		$usuario = mysqli_real_escape_string($conexion, $_POST['user']);
 		$password = mysqli_real_escape_string($conexion, $_POST['pass']);
 
-		//Cookie de usuario y contraseña
-		setcookie("COOKIE_INDEFINED_SESSION", TRUE, time()+$_ENV['COOKIE_SESSION'], "/");
-		setcookie("COOKIE_DATA_INDEFINED_SESSION[user]", $usuario, time()+$_ENV['COOKIE_SESSION'], "/");
-		setcookie("COOKIE_DATA_INDEFINED_SESSION[pass]", $password, time()+$_ENV['COOKIE_SESSION'], "/");
-
+		
 		$sql = "SELECT id, password FROM usuarios WHERE usuario = '$usuario'";
 		$resultado = $conexion->query($sql);
 		$rows = $resultado->num_rows;
@@ -68,6 +64,10 @@ if (isset($_COOKIE['COOKIE_INDEFINED_SESSION'])) {
 			$password_encriptada = $row['password'];
 			if(password_verify($password,$password_encriptada) == TRUE){
 				$_SESSION['id_usuario'] = $row['id'];
+				//Cookie de usuario y contraseña
+				setcookie("COOKIE_INDEFINED_SESSION", TRUE, time()+$_ENV['COOKIE_SESSION'], "/");
+				setcookie("COOKIE_DATA_INDEFINED_SESSION[user]", $usuario, time()+$_ENV['COOKIE_SESSION'], "/");
+				setcookie("COOKIE_DATA_INDEFINED_SESSION[pass]", $password, time()+$_ENV['COOKIE_SESSION'], "/");
 				header("Location: panel");
 			}else{
 				echo "<script>
